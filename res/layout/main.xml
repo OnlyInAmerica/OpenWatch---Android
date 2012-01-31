@@ -17,29 +17,44 @@
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
 	    android:src="@drawable/stripey" />
-    <ImageView
-    	android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content"
-	    android:src="@drawable/logo"
-	    android:scaleType="fitCenter"
-	    android:layout_gravity="center_horizontal"
-	    android:paddingLeft="10dip"
-	    android:paddingRight="10dip"
-	    android:paddingTop="20dip"
-	    android:paddingBottom="0dip" >
-    </ImageView>
-        <ImageView
-        android:id="@+id/tag"
-    	android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content"
-	    android:src="@drawable/tag1"
-	    android:scaleType="fitCenter"
-	    android:layout_gravity="center_horizontal"
-	    android:paddingLeft="10dip"
-	    android:paddingRight="10dip"
-	    android:paddingTop="-30dip"
-	    android:paddingBottom="60dip" >
-    </ImageView>
+     
+		     <ImageView
+		         android:layout_width="wrap_content"
+		         android:layout_height="150dip"
+		         android:layout_gravity="center_horizontal"
+		         android:paddingBottom="0dip"
+		         android:paddingLeft="10dip"
+		         android:paddingRight="10dip"
+		         android:paddingTop="20dip"
+		         android:scaleType="fitCenter"
+		         android:src="@drawable/aclu_logo" >
+
+			    </ImageView>
+
+	            <TextView
+	                android:id="@+id/PoliceTape"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:text="Police Tape"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#000000"
+	                android:textSize="38dp"
+	                android:textStyle="bold" />
+
+	            <TextView
+	                android:id="@+id/PoliceTapeTag"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:text="Powered by OpenWatch"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#000000"
+	                android:textSize="24dp"
+	                android:paddingBottom="80dip"
+	                android:textStyle="italic" />
+	            
+	  
 
     		    <Button
     		    android:textAppearance="?android:attr/textAppearanceMedium"

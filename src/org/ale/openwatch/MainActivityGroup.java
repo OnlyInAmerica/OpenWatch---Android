@@ -83,9 +83,6 @@ public class MainActivityGroup extends ActivityGroup {
             }
     };
 
-    
-
-    
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         

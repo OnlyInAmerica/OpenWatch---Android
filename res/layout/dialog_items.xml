@@ -15,7 +15,7 @@
 	    android:layout_height="wrap_content">    
     
 		<ImageView android:id="@+id/image"
-			android:src="@drawable/icon"
+			android:src="@drawable/aclunj_icon"
 			android:layout_width="50dip"
 			android:layout_height="50dip"/>
 			
