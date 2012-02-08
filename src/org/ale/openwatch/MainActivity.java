@@ -246,7 +246,7 @@ public class MainActivity extends Activity {
                        }
            
        });
-       
+       /* Remove awesome tag
        ImageView tag = (ImageView)findViewById(R.id.tag);
        int rand = new Random().nextInt(10);
        switch(rand){
@@ -281,7 +281,7 @@ public class MainActivity extends Activity {
            tag.setImageResource(R.drawable.tag10);
            return;
        
-       }
+       }*/
    }
    
 

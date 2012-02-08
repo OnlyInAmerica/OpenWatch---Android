@@ -50,5 +50,12 @@
     
     <string name="faq">FAQ</string>
     <string name="about">About</string>
+    <string name="disclaimer">Information that is recorded and submitted via the ACLU-NJ Police Tape may be posted on the OpenWatch.net website and submitted to the ACLU-NJ for their use in advocating for better, more accountable police practices. DO NOT submit recordings that you do not wish to expose to public view. If you believe that a recording contains information that may subject you to criminal or civil liability or undermine your ability to pursue legal remedies, you may wish to consult an attorney prior to submitting your recording.</string>
+    <string name="ContactACLU">&amp;lt;a href=\&amp;quot;http://aclu.org/complaint/\&amp;quot;\&amp;gt;Contact ACLU-NJ!&amp;lt;/a&amp;gt;</string>
+    <string name="EULA">In the proprietary software industry, an end-user license agreement or software license agreement is the contract between the licensor and purchaser, establishing the purchaser's right to use the software. The license may define ways under which the copy can be used, in addition to the automatic rights of the buyer including the first sale doctrine and 17 U.S.C. § 117 (freedom to use, archive, re-sale, and backup).
+Many form contracts are only contained in digital form, and only presented to a user as a click-through where the user must &quot;accept&quot;. As the user may not see the agreement until after he or she has already purchased the software, these documents may be contracts of adhesion.
+Software companies often make special agreements with large businesses and government entities that include support contracts and specially drafted warranties.In the proprietary software industry, an end-user license agreement or software license agreement is the contract between the licensor and purchaser, establishing the purchaser's right to use the software. The license may define ways under which the copy can be used, in addition to the automatic rights of the buyer including the first sale doctrine and 17 U.S.C. § 117 (freedom to use, archive, re-sale, and backup).
+Many form contracts are only contained in digital form, and only presented to a user as a click-through where the user must &quot;accept&quot;. As the user may not see the agreement until after he or she has already purchased the software, these documents may be contracts of adhesion.
+Software companies often make special agreements with large businesses and government entities that include support contracts and specially drafted warranties.</string>
     
 </resources>

@@ -5,6 +5,7 @@ import org.ale.openwatch.MyLocation.LocationResult;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
@@ -23,9 +24,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DescribeActivity extends Activity{
-     
+	
+    Context c;
 	TextView lead;
 	EditText title;
 	EditText pub_desc;
@@ -36,11 +39,13 @@ public class DescribeActivity extends Activity{
 	TextView locationText;
 	Button locationSwitch; 
 	boolean switchPressed = false;
-	boolean switchOn = true;
+	boolean switchOn = true;		
+	boolean agreed = false;			//has agreed to aclu disclaimer before uploading
 	Location loc;
 	double lat;
 	double lon;
 	boolean hasLoc;
+	private static final int DISCLAIMER_CODE = 0;
 	
     uploadService u_service;
     private boolean u_servicedBind = false;
@@ -60,7 +65,7 @@ public class DescribeActivity extends Activity{
 	
 	public void onCreate(Bundle icicle) { 
           super.onCreate(icicle); 
-          
+          c = this;
           //no title bar
           requestWindowFeature(Window.FEATURE_NO_TITLE);
           //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -77,11 +82,28 @@ public class DescribeActivity extends Activity{
           locationText = (TextView) findViewById(R.id.location_text);
           
 	      lead.setText(getString(R.string.please_describe));
+	      
+	      /*
+	       * alert2.setPositiveButton(getString(R.string.yes_upload), new DialogInterface.OnClickListener() {
+                               public void onClick(DialogInterface dialog, int whichButton) {
+                                       mHandler.post(new Runnable() {
+
+                                           public void run() {
+                                               Intent mainIntent = new Intent(c, DescribeActivity.class); 
+                                               startActivity(mainIntent);
+                                           }});
+
+                                       finish();
+                               }});
+	       */
           
           b.setOnClickListener(new OnClickListener(){
-
+        	  //redirect to aclu eula
 			public void onClick(View v) {
-				if(title.getText().toString().equals("") || pub_desc.getText().toString().equals("")){
+				Intent i = new Intent(c, DisclaimerActivity.class);
+        		startActivityForResult(i, DISCLAIMER_CODE);
+        		
+				/*if(title.getText().toString().equals("") || pub_desc.getText().toString().equals("")){
 					return;
 				}
 				
@@ -120,7 +142,7 @@ public class DescribeActivity extends Activity{
 					    
 				
 					}}, 200);
-				finish();
+				finish();*/
 			}});
           
           locationSwitch.setOnTouchListener(new OnTouchListener() {
@@ -163,6 +185,16 @@ public class DescribeActivity extends Activity{
           
           startService(new Intent(this, uService.class));
           bindUploadService();
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == RESULT_OK && requestCode == DISCLAIMER_CODE) {
+			if (data.hasExtra("agreed")){
+				Toast.makeText(this, "Disclaimer disclaimed",
+						Toast.LENGTH_SHORT).show();
+			}
+		}
 	}
 	
     private void bindUploadService(){

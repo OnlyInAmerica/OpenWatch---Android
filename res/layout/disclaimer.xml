@@ -1,0 +1,165 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout1"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff" >
+        
+        <ImageView
+   		android:id="@+id/stripey"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:src="@drawable/stripey" />
+        
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout1"
+        android:orientation="vertical"
+        android:padding="5dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff" >
+		
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:orientation="horizontal" >
+            
+            <ImageView
+                android:id="@+id/aclu"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/aclu_logo_small" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/aclu"
+                android:orientation="vertical" >
+            
+            <TextView
+	                android:id="@+id/PoliceTape"
+	                android:layout_marginTop="10dp"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_centerHorizontal="true"
+	                android:text="Police Tape"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#000000"
+	                android:textSize="28dp"
+	                android:textStyle="bold" />
+				
+	            <TextView
+	                android:id="@+id/PoliceTapeTag"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/PoliceTape"
+	                android:layout_centerHorizontal="true"
+	                android:text="Powered by OpenWatch"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#000000"
+	                android:textSize="14dp"
+	                android:textStyle="italic" />
+	    </RelativeLayout>
+        </RelativeLayout>
+        
+        <ScrollView
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    >
+            	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:id="@+id/linearLayout1"
+		        android:orientation="vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent">
+
+					<TextView
+	                android:id="@+id/Disclaimer"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:text="@string/disclaimer"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#000000"
+	                android:textSize="14dp"
+	                />
+					<TextView
+	                android:id="@+id/DisclaimerSubmitQ"
+	                android:padding="10dp"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:text="Submit recording?"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textStyle="bold"
+	                android:textColor="#000000"
+	                android:textSize="14dp"
+	                />
+					
+					<RelativeLayout
+					    android:id="@+id/buttonHolder"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_centerHorizontal="true"
+					    android:layout_toRightOf="@+id/aclu"
+					    android:gravity="center_horizontal"
+					    android:orientation="vertical" >
+
+					    <Button
+					        android:id="@+id/yessirb"
+					        android:layout_width="250dip"
+					        android:layout_height="60dip"
+					        android:layout_alignParentTop="true"
+					        android:background="@drawable/button"
+					        android:ellipsize="none"
+					        android:padding="20dip"
+					        android:shadowColor="#ffffff"
+					        android:shadowDy="-1"
+					        android:shadowRadius="1"
+					        android:singleLine="true"
+					        android:text="Yes"
+					        android:textAppearance="?android:attr/textAppearanceMedium"
+					        android:textColor="#000000" />
+
+					    <Button
+					        android:id="@+id/nob"
+					        android:layout_width="250dip"
+					        android:layout_height="60dip"
+					        android:layout_below="@+id/yessirb"
+					        android:background="@drawable/button"
+					        android:ellipsize="none"
+					        android:padding="20dip"
+					        android:shadowColor="#ffffff"
+					        android:shadowDy="-1"
+					        android:shadowRadius="1"
+					        android:singleLine="true"
+					        android:text="No"
+					        android:textAppearance="?android:attr/textAppearanceMedium"
+					        android:textColor="#000000" />
+					    
+					    <Button
+					        android:id="@+id/returnb"
+					        android:layout_width="250dip"
+					        android:layout_height="60dip"
+					        android:layout_below="@+id/nob"
+					        android:background="@drawable/button"
+					        android:ellipsize="none"
+					        android:padding="10dip"
+					        android:shadowColor="#ffffff"
+					        android:shadowDy="-1"
+					        android:shadowRadius="1"
+					        android:singleLine="true"
+					        android:text="Contact ACLU-NJ"
+					        android:textAppearance="?android:attr/textAppearanceMedium"
+					        android:textColor="#000000" />
+	                
+					</RelativeLayout>
+	</LinearLayout>
+	</ScrollView>
+	</LinearLayout>
+    </LinearLayout>
