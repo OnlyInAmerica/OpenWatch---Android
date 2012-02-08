@@ -349,7 +349,7 @@ public class MainActivityGroup extends ActivityGroup {
         String first = prefs.getString("first_time", "fuck");
         if(first.contains("fuck")){
             new AlertDialog.Builder(this)
-            .setMessage("Welcome to OpenWatch! \n\n This application allows opportunistic citizen journalists to invisibly record public and private officials and post the recordings to a central website, openwatch.net. A guide to using the application is availble in the Tutorial in the menu. More information about the OpenWatch can be found in the About section.")
+            .setMessage("Welcome to Police Tape! \n\n This application allows opportunistic citizen journalists to invisibly record public and private officials and post the recordings to a central website, openwatch.net. A guide to using the application is availble in the Tutorial in the menu. More information about the OpenWatch can be found in the About section.")
             .setPositiveButton("Okay!", null)
             .show();
             editor2 = prefs.edit();

@@ -21,14 +21,22 @@
                   android:label="@string/app_name"
                   android:screenOrientation="portrait">
         </activity>
-                <activity android:name=".DescribeActivity"
+        <activity android:name=".DescribeActivity"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name=".DisclaimerActivity"
                   android:label="@string/app_name"
-					>
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".EulaActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
         </activity>
 		<activity 
 				android:name="org.openintents.filemanager.FileManagerActivity" 
 				android:label="@string/app_name">
         </activity>
+        
         
         <service android:name=".rService"/>
         <service android:name=".uService"/>

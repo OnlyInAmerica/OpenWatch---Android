@@ -59,6 +59,11 @@ public class MainActivity extends Activity {
     private MainActivityGroup mag;
     private LinearLayout root;
     
+    private static final String PREFS = "EULA_ACCEPTED";
+    private SharedPreferences prefs;
+	private SharedPreferences.Editor editor;
+	private static final int EULA_CODE = 0;
+    
     Context c;
     
     @Override
@@ -67,10 +72,30 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
         
+        prefs = getSharedPreferences(PREFS, 0);
+        editor = prefs.edit();
+        
         vr = (VideoRecorder) findViewById(R.id.camcorder_preview);
         c = this;
         
+        if(!prefs.getBoolean("eula_accepted", false)){
+        	Intent i = new Intent(c, EulaActivity.class);
+    		startActivityForResult(i, EULA_CODE);
+        }
     }
+    
+    @Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == RESULT_OK && requestCode == EULA_CODE) {
+			if (data.getBooleanExtra("agreed", false)) {
+		        editor.putBoolean("eula_accepted", true);
+		        editor.commit();
+			}
+			else{
+				finish();
+			}
+		}
+	}
     
     public void activateButton() {
         final Button ib = (Button) findViewById(R.id.ib);
@@ -246,7 +271,7 @@ public class MainActivity extends Activity {
                        }
            
        });
-       
+       /* Remove awesome tag
        ImageView tag = (ImageView)findViewById(R.id.tag);
        int rand = new Random().nextInt(10);
        switch(rand){
@@ -281,7 +306,7 @@ public class MainActivity extends Activity {
            tag.setImageResource(R.drawable.tag10);
            return;
        
-       }
+       }*/
    }
    
 

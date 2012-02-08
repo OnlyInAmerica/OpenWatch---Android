@@ -50,5 +50,8 @@
     
     <string name="faq">FAQ</string>
     <string name="about">About</string>
+    <string name="disclaimer">Information that is recorded and submitted via the ACLU-NJ Police Tape may be posted on the OpenWatch.net website and submitted to the ACLU-NJ for their use in advocating for better, more accountable police practices. DO NOT submit recordings that you do not wish to expose to public view. If you believe that a recording contains information that may subject you to criminal or civil liability or undermine your ability to pursue legal remedies, you may wish to consult an attorney prior to submitting your recording.</string>
+    <string name="contactACLU">Contact ACLU-NJ</string>
+    <string name="EULA">eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text </string>
     
 </resources>
