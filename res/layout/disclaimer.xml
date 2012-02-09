@@ -154,8 +154,7 @@
 					        android:shadowDy="-1"
 					        android:shadowRadius="1"
 					        android:singleLine="true"
-					        android:text="@string/contactACLU"
-					        android:autoLink="web"
+					        android:text="Contact ACLU-NJ"
 					        android:textAppearance="?android:attr/textAppearanceMedium"
 					        android:textColor="#000000" />
 	                

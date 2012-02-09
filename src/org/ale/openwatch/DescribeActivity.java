@@ -101,6 +101,47 @@ public class DescribeActivity extends Activity{
 			public void onClick(View v) {
 				Intent i = new Intent(c, DisclaimerActivity.class);
         		startActivityForResult(i, DISCLAIMER_CODE);
+        		
+				/*if(title.getText().toString().equals("") || pub_desc.getText().toString().equals("")){
+					return;
+				}
+				
+				b.setPressed(true);
+				b.setEnabled(false);
+				p.setVisibility(View.VISIBLE);
+				loading.setVisibility(View.VISIBLE);
+				loading.setText("Sending..");
+				
+		        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+		        
+		        final SharedPreferences.Editor editor = prefs.edit();
+		        editor.putString("pub_desc", pub_desc.getText().toString());
+		        editor.putString("priv_desc", priv_desc.getText().toString());
+	            editor.putString("title", title.getText().toString());
+	            
+	            if(hasLoc && switchOn) {
+	                editor.putString("location", lat + ", " + lon);
+	            }
+	            else{
+	                editor.putString("location", "");
+	            }
+	            
+		        editor.commit();
+				
+				Handler mHandler = new Handler();
+				mHandler.postDelayed(new Runnable(){
+
+					public void run() {
+						
+					    try {
+                            u_service.start();
+                        } catch (RemoteException e) {
+                            e.printStackTrace();
+                        }
+					    
+				
+					}}, 200);
+				finish();*/
 			}});
           
           locationSwitch.setOnTouchListener(new OnTouchListener() {
@@ -149,50 +190,8 @@ public class DescribeActivity extends Activity{
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == RESULT_OK && requestCode == DISCLAIMER_CODE) {
 			if (data.hasExtra("agreed")){
-				//If user hasn't agreed, do nothing
-				if(!data.getBooleanExtra("agreed", false))
-					return;
-				
-				if(title.getText().toString().equals("") || pub_desc.getText().toString().equals("")){
-					return;
-				}
-				
-				b.setPressed(true);
-				b.setEnabled(false);
-				p.setVisibility(View.VISIBLE);
-				loading.setVisibility(View.VISIBLE);
-				loading.setText("Sending..");
-				
-		        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-		        
-		        final SharedPreferences.Editor editor = prefs.edit();
-		        editor.putString("pub_desc", pub_desc.getText().toString());
-		        editor.putString("priv_desc", priv_desc.getText().toString());
-	            editor.putString("title", title.getText().toString());
-	            
-	            if(hasLoc && switchOn) {
-	                editor.putString("location", lat + ", " + lon);
-	            }
-	            else{
-	                editor.putString("location", "");
-	            }
-	            
-		        editor.commit();
-				
-				Handler mHandler = new Handler();
-				mHandler.postDelayed(new Runnable(){
-
-					public void run() {
-						
-					    try {
-                            u_service.start();
-                        } catch (RemoteException e) {
-                            e.printStackTrace();
-                        }
-					    
-				
-					}}, 200);
-				finish();
+				Toast.makeText(this, "Disclaimer disclaimed",
+						Toast.LENGTH_SHORT).show();
 			}
 		}
 	}
