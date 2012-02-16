@@ -17,6 +17,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
+import android.content.DialogInterface.OnClickListener;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
@@ -54,6 +55,7 @@ public class MainActivityGroup extends ActivityGroup {
     private VideoRecorder vr;
     private String code = "BBB";
     private String codeLeft = "BBB";
+    private Context c;
     RecorderActivity raActivity;
     MainActivity maActivity;
     private int vol;
@@ -176,7 +178,6 @@ public class MainActivityGroup extends ActivityGroup {
     }
 
     @Override public boolean onCreateOptionsMenu(Menu menu) {
-        
         MenuItem mi = menu.add(0,0,0,R.string.menu_open);
         mi.setIcon(android.R.drawable.ic_menu_add);
         MenuItem mi3 = menu.add(0,2,0,R.string.tutorial);
@@ -275,7 +276,15 @@ public class MainActivityGroup extends ActivityGroup {
                 new AlertDialog.Builder(this)
                 .setTitle("About OpenWatch")
                 .setMessage(getString(R.string.about_text))
-                .setPositiveButton("Okay!", null)
+                .setPositiveButton("About the ACLU", new OnClickListener() {
+                    
+                    public void onClick(DialogInterface dialog, int which) {
+                    	
+                    	Intent mainIntent = new Intent(c, ACLUActivity.class); 
+                        startActivity(mainIntent);
+                        
+                    }})
+                .setNeutralButton("Done", null)
                 .show();
                 return(true);
             case 2:
@@ -300,6 +309,8 @@ public class MainActivityGroup extends ActivityGroup {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.group);
+        
+        c = this;
         
         Intent i = new Intent(this, RecorderActivity.class);
         // Ensure that only one ListenActivity can be launched. Otherwise, we may
