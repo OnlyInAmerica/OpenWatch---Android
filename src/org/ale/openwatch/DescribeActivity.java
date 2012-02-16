@@ -3,6 +3,7 @@ package org.ale.openwatch;
 import org.ale.openwatch.MyLocation.LocationResult;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -99,6 +100,14 @@ public class DescribeActivity extends Activity{
           b.setOnClickListener(new OnClickListener(){
         	  //redirect to aclu eula
 			public void onClick(View v) {
+				if(title.getText().toString().equals("") || pub_desc.getText().toString().equals("")){
+					new AlertDialog.Builder(c)
+	                .setTitle("Please Provide More Information")
+	                .setMessage("A title and public description must be provided before uploading.")
+	                .setPositiveButton("Okay!", null)
+	                .show();
+					return;
+				}
 				Intent i = new Intent(c, DisclaimerActivity.class);
         		startActivityForResult(i, DISCLAIMER_CODE);
         		
@@ -189,9 +198,44 @@ public class DescribeActivity extends Activity{
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == RESULT_OK && requestCode == DISCLAIMER_CODE) {
-			if (data.hasExtra("agreed")){
-				Toast.makeText(this, "Disclaimer disclaimed",
-						Toast.LENGTH_SHORT).show();
+			if (data.hasExtra("agreed") && data.getBooleanExtra("agreed", false)){
+				b.setPressed(true);
+				b.setEnabled(false);
+				p.setVisibility(View.VISIBLE);
+				loading.setVisibility(View.VISIBLE);
+				loading.setText("Sending..");
+				
+		        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+		        
+		        final SharedPreferences.Editor editor = prefs.edit();
+		        editor.putString("pub_desc", pub_desc.getText().toString());
+		        editor.putString("priv_desc", priv_desc.getText().toString());
+	            editor.putString("title", title.getText().toString());
+	            
+	            if(hasLoc && switchOn) {
+	                editor.putString("location", lat + ", " + lon);
+	            }
+	            else{
+	                editor.putString("location", "");
+	            }
+	            
+		        editor.commit();
+				
+				Handler mHandler = new Handler();
+				mHandler.postDelayed(new Runnable(){
+
+					public void run() {
+						
+					    try {
+                            u_service.start();
+                        } catch (RemoteException e) {
+                            e.printStackTrace();
+                        }
+					    
+				
+					}}, 200);
+				finish();
+				
 			}
 		}
 	}

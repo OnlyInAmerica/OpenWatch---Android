@@ -270,12 +270,12 @@ public class uService extends Service{
     public void update_notification(){
 
         if (notification == null){
-            notification = new Notification(R.drawable.icon, getString(R.string.uploading_file) , System.currentTimeMillis());}
+            notification = new Notification(R.drawable.aclu_icon, getString(R.string.uploading_file) , System.currentTimeMillis());}
 
         
         if(contentView == null){
             contentView = new RemoteViews(getPackageName(), R.xml.progressview);
-            contentView.setImageViewResource(R.id.image, R.drawable.icon);
+            contentView.setImageViewResource(R.id.image, R.drawable.aclu_icon);
         }
         if(notificationIntent == null){
              notificationIntent = new Intent(this, MainActivityGroup.class);
@@ -290,9 +290,9 @@ public class uService extends Service{
     
     public void done_notification(){
       
-      notification = new Notification(R.drawable.icon, getString(R.string.upload_done) , System.currentTimeMillis());
+      notification = new Notification(R.drawable.aclu_icon, getString(R.string.upload_done) , System.currentTimeMillis());
       contentView = new RemoteViews(getPackageName(), R.xml.progressview);
-      contentView.setImageViewResource(R.id.image, R.drawable.icon);
+      contentView.setImageViewResource(R.id.image, R.drawable.aclu_icon);
       notificationIntent = new Intent(this, MainActivityGroup.class);
       contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
       

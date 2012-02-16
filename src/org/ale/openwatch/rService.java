@@ -124,7 +124,7 @@ public class rService extends Service{
             CharSequence text = foreground_service_started;
 
             // Set the icon, scrolling text and timestamp
-            Notification notification = new Notification(R.drawable.icon, text,
+            Notification notification = new Notification(R.drawable.aclu_icon, text,
                     System.currentTimeMillis());
 
             // The PendingIntent to launch our activity if the user selects this notification
