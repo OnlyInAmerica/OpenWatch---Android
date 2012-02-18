@@ -23,6 +23,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -101,6 +102,10 @@ public class MainActivity extends Activity {
         final Button ib = (Button) findViewById(R.id.ib);
         ib.setClickable(true);
         ib.setBackgroundResource(R.drawable.button);
+        
+        final Button kyr = (Button) findViewById(R.id.kib);
+        kyr.setClickable(true);
+        kyr.setBackgroundResource(R.drawable.button);
         recording = false;
     }
     
@@ -115,6 +120,25 @@ public class MainActivity extends Activity {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         final SharedPreferences.Editor editor;
         editor = prefs.edit();
+        activateButton();
+        final Button kyr = (Button) findViewById(R.id.kib);
+
+        final OnTouchListener knowYourRights = new OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                
+                if(event.getAction() != MotionEvent.ACTION_DOWN) {
+                    return false;
+                }
+                kyr.setClickable(false);
+                kyr.setBackgroundResource(R.drawable.buttonpressed);
+                Intent i = new Intent(c, KnowYourRightsActivity.class);
+        		startActivity(i);
+				
+				return true;
+            }};
+            
+        kyr.setOnTouchListener(knowYourRights);
         
         final OnTouchListener realOTL = new OnTouchListener() {
 

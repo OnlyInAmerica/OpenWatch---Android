@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="wrap_content"
     android:layout_height="fill_parent"
-    android:background="@drawable/gradient_background">
-
+    android:background="@drawable/gradient_background" >
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root"
@@ -20,7 +18,7 @@
      
 		     <ImageView
 		         android:layout_width="wrap_content"
-		         android:layout_height="150dip"
+		         android:layout_height="110dip"
 		         android:layout_gravity="center_horizontal"
 		         android:paddingBottom="0dip"
 		         android:paddingLeft="10dip"
@@ -51,56 +49,76 @@
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
 	                android:textSize="24dp"
-	                android:paddingBottom="80dip"
+	                android:paddingBottom="20dip"
 	                android:textStyle="italic" />
 	            
-	  
+				<RelativeLayout
+				    xmlns:android="http://schemas.android.com/apk/res/android"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:layout_gravity="center"
+				    android:gravity="center"
+				    android:orientation="vertical" >
 
-    		    <Button
-    		    android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:id="@+id/aib"
-		        android:text="Record Audio"
-            	android:layout_gravity="center"
-				android:layout_width="250dip" 
-    			android:layout_height="90dip"
-    			android:textColor="#000000"
-    			android:background="@drawable/button"
-    			android:shadowColor="#ffffff"
-    			android:shadowDy="-1"
-    			android:shadowRadius="1"
-    			android:singleLine="true"
-    			android:ellipsize="none"
-    			android:padding="20dip" />
-    			
-	        	<TextView  
-			    android:layout_width="fill_parent" 
-			    android:layout_height="wrap_content" 
-			    android:text=" "
-			    android:id="@+id/s1"
-		    	android:textAppearance="?android:attr/textAppearanceLarge"
-			    android:gravity="center" />
-    
-    		    <Button
-    		    android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:id="@+id/ib"
-		        android:text="Record Video"
-            	android:layout_gravity="center"
-				android:layout_width="250dip" 
-    			android:layout_height="90dip"
-    			android:textColor="#000000"
-    			android:background="@drawable/button"
-    			android:shadowColor="#ffffff"
-    			android:shadowDy="1"
-    			android:shadowRadius="1"
-    			android:singleLine="true"
-    			android:ellipsize="none"
-			    android:paddingLeft="10dip"
-			    android:paddingRight="10dip"
-			    android:paddingTop="10dip"
-			    android:paddingBottom="10dip" />
-			    
+				    <Button
+				        android:id="@+id/kib"
+				        android:layout_width="250dip"
+				        android:layout_height="70dip"
+				        android:layout_centerHorizontal="true"
+				        android:layout_gravity="center"
+				        android:layout_marginBottom="10dip"
+				        android:background="@drawable/button"
+				        android:ellipsize="none"
+				        android:padding="20dip"
+				        android:shadowColor="#ffffff"
+				        android:shadowDy="-1"
+				        android:shadowRadius="1"
+				        android:singleLine="true"
+				        android:text="Know Your Rights"
+				        android:textAppearance="?android:attr/textAppearanceMedium"
+				        android:textColor="#000000" />
 
-    
+				    <Button
+				        android:id="@+id/aib"
+				        android:layout_width="250dip"
+				        android:layout_height="70dip"
+				        android:layout_below="@+id/kib"
+				        android:layout_centerHorizontal="true"
+				        android:layout_gravity="center"
+				        android:layout_marginBottom="10dip"
+				        android:background="@drawable/button"
+				        android:ellipsize="none"
+				        android:padding="10dip"
+				        android:shadowColor="#ffffff"
+				        android:shadowDy="-1"
+				        android:shadowRadius="1"
+				        android:singleLine="true"
+				        android:text="Record Audio"
+				        android:textAppearance="?android:attr/textAppearanceMedium"
+				        android:textColor="#000000" />
+
+				    <Button
+				        android:id="@+id/ib"
+				        android:layout_width="250dip"
+				        android:layout_height="70dip"
+				        android:layout_below="@+id/aib"
+				        android:layout_centerHorizontal="true"
+				        android:layout_gravity="center"
+				        android:background="@drawable/button"
+				        android:ellipsize="none"
+				        android:paddingBottom="10dip"
+				        android:paddingLeft="10dip"
+				        android:paddingRight="10dip"
+				        android:paddingTop="10dip"
+				        android:shadowColor="#ffffff"
+				        android:shadowDy="1"
+				        android:shadowRadius="1"
+				        android:singleLine="true"
+				        android:text="Record Video"
+				        android:textAppearance="?android:attr/textAppearanceMedium"
+				        android:textColor="#000000" />
+				</RelativeLayout>
+
 </LinearLayout>
 	<TextView  
 			    android:layout_width="fill_parent" 

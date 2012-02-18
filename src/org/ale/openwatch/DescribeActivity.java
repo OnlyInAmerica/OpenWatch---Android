@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -110,7 +111,7 @@ public class DescribeActivity extends Activity{
 				}
 				Intent i = new Intent(c, DisclaimerActivity.class);
         		startActivityForResult(i, DISCLAIMER_CODE);
-        		
+
 				/*if(title.getText().toString().equals("") || pub_desc.getText().toString().equals("")){
 					return;
 				}

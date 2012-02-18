@@ -1,0 +1,509 @@
+        
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout1"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff" >
+        <ImageView
+   		android:id="@+id/stripey"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:src="@drawable/stripey" />
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:orientation="horizontal" 
+            android:layout_marginBottom="10dp">
+            
+            <ImageView
+                android:id="@+id/aclu"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/aclu_logo_small" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/aclu"
+                android:orientation="vertical" >
+            
+            <TextView
+                android:id="@+id/PoliceTape"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Know Your Rights"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+				
+	    </RelativeLayout>
+        </RelativeLayout>
+		<TableLayout
+            android:id="@+id/TableLayout02"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMoreInfo"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="0dp" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:padding="0dp" >
+
+            <RelativeLayout
+                android:id="@+id/carLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="30dp" >
+
+                <ImageView
+                    android:id="@+id/cariv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/car" />
+
+                <TextView
+                    android:id="@+id/cartv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cariv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="Car"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/homeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" 
+                android:layout_marginRight="30dp">
+
+                <ImageView
+                    android:id="@+id/homeiv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:id="@+id/hometv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homeiv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="Home"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/questioningLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="30dp" >
+
+                <ImageView
+                    android:id="@+id/questioningiv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/questioning" />
+
+                <TextView
+                    android:id="@+id/questioningtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/questioningiv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="Stop"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/arrestLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/arrestiv"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/arrest" />
+
+                <TextView
+                    android:id="@+id/arresttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/arrestiv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="Arrest"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+        
+        <ScrollView 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent"
+   		android:scrollbars="vertical">
+   		<RelativeLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        <TableLayout
+        android:layout_height="wrap_content"
+        android:id="@+id/contentTable"
+        android:layout_width="fill_parent"
+        android:padding="10dp"
+        android:isScrollContainer="true"
+    >
+        <TableRow
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:singleLine="false"
+                android:text="If You&apos;re Stopped by the Police"
+                android:textColor="#000000" 
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot1"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+                android:textSize="16dp"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Think carefully about your words, movement, body language, and emotions. " 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Don’t get into an argument with the police. " 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+         <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Remember, anything you say or do can be used against you." 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Keep your hands where the police can see them" 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Don’t run. Don’t touch any police officer. " 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Don’t resist even if you believe you are innocent" 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Don’t complain on the scene or tell the police they’re wrong or that you’re going to file a complaint." 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Do not make any statements regarding the incident. " 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:textColor="#000000"
+                android:singleLine="false"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Ask for a lawyer immediately upon your arrest. " 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Remember officers&apos; badge and patrol car numbers."
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Write down everything you remember ASAP. " 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="Try to find witnesses, their names and phone numbers." 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="If you are injured, take photographs of the injuries as soon as possible, but make sure you seek medical attention first." 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp">
+            
+            <TextView android:id="@+id/tvCleaningDot2"
+                android:layout_height="wrap_content" 
+                android:text="•"
+                android:singleLine="false"
+                android:textColor="#000000"
+            />
+            <TextView android:id="@+id/tvCleaningFirst"
+                android:layout_height="wrap_content" 
+                android:text="If you feel your rights have been violated, file a written complaint with the police department’s internal affairs division, visit www.aclu-nj.org/profiling or call the ACLU hotline at 877-6-PROFILE." 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:singleLine="false" 
+            />
+        </TableRow>
+       
+        </TableLayout>
+        
+        
+    </RelativeLayout>
+    </ScrollView>
+        </LinearLayout>
+

@@ -3,8 +3,10 @@ package org.ale.openwatch;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
@@ -13,6 +15,7 @@ public class DisclaimerActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.disclaimer);
+		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 		Button yesButton = (Button) findViewById(R.id.yessirb);
 		Button noButton = (Button) findViewById(R.id.nob);
 		Button contactButton = (Button) findViewById(R.id.contactb);

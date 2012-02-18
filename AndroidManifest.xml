@@ -32,10 +32,19 @@
                   android:label="@string/app_name"
                   android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".ACLUActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".KnowYourRightsActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
 		<activity 
 				android:name="org.openintents.filemanager.FileManagerActivity" 
 				android:label="@string/app_name">
         </activity>
+        
         
         
         <service android:name=".rService"/>

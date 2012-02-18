@@ -53,5 +53,33 @@
     <string name="disclaimer">Information that is recorded and submitted via the ACLU-NJ Police Tape may be posted on the OpenWatch.net website and submitted to the ACLU-NJ for their use in advocating for better, more accountable police practices. DO NOT submit recordings that you do not wish to expose to public view. If you believe that a recording contains information that may subject you to criminal or civil liability or undermine your ability to pursue legal remedies, you may wish to consult an attorney prior to submitting your recording.</string>
     <string name="contactACLU">Contact ACLU-NJ</string>
     <string name="EULA">eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text </string>
+    <string name="bulletListTest">
+        <![CDATA[
+        <ol><li>item 1\n</li><li>item 2\n</li></ol>
+        <p>Think carefully about your words, movement, body language, and emotions</p>
+        <p>Don’t get into an argument with the police. </p>
+		]]>
+	</string>
+    <string-array name="car_rights">
+        <item>  
+	        Upon request, show them your driver’s license, registration, and proof of insurance. In certain cases, your car 
+			can be searched without a warrant as long as the police 
+			have probable cause. To protect yourself later, you
+			should make it clear that you do not consent to a search. 
+			It is not lawful for police to arrest you simply for refusing 
+			to consent to a search.
+		</item>
+		<item>
+		    If you’re given a ticket, you should sign it; otherwise 
+			you can be arrested. You can always fight the case in 
+			court later.
+		</item>
+		<item>
+		    If you’re suspected of drunk driving (DWI) and refuse 
+			to take a blood, urine or breath test, your driver’s license 
+			may be suspended. 
+		</item>
+        
+    </string-array>
     
 </resources>

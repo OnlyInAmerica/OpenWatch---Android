@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
@@ -13,6 +14,7 @@ public class ACLUActivity extends Activity{
 	 public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.about);
+			requestWindowFeature(Window.FEATURE_NO_TITLE);
 			Button donateButton = (Button) findViewById(R.id.donateb);
 			
 			donateButton.setOnClickListener(new OnClickListener(){
