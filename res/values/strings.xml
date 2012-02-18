@@ -81,5 +81,164 @@
 		</item>
         
     </string-array>
+    <string-array name="home_rights">
+        <item>
+            If the police knock and ask to enter your home, you
+			don’t have to admit them unless they have a warrant
+			signed by a judge.
+		</item>
+		<item>
+		    However, in some emergency situations (like when a 
+			person is screaming for help inside, or when the police 
+			are chasing someone) officers are allowed to enter and 
+			search your home without a warrant. 
+		</item>
+		<item>
+		    If you are arrested, the police can search you and the 
+			area close by. If you are in a building, “close by” usually 
+			means just the room you are in. 
+		</item>
+    </string-array>
+    <string-array name="arrest_rights">
+        <item>
+            You have the right to remain silent and to talk to a 
+			lawyer before you talk to the police. Tell the police 
+			nothing except your name and address. Don’t give any 
+			explanations, excuses or stories. You can make your
+			defense later, in court, based on what you and your
+			lawyer decide is best.
+        </item>
+        <item>
+            Ask to see a lawyer immediately. If you can’t pay for a 
+			lawyer, you have a right to a free one, and should ask the 
+			police how the lawyer can be contacted. Don’t say anything without a lawyer. 
+        </item>
+        <item>
+            Within a reasonable time after your arrest, or booking, you have the right to make a local phone call: to a 
+			lawyer, bail bondsman, a relative or any other person. 
+			The police may not listen to the call to the lawyer.
+        </item>
+        <item>
+            Sometimes you can be released without bail, or have
+			bail lowered. Have your lawyer ask the judge about this
+			possibility. You must be taken before the judge on the 
+			next court day after arrest.
+        </item>
+        <item>
+            Do not make any decisions in your case until you have 
+			talked with a lawyer.
+        </item>
+    </string-array>
+    <string-array name="stop_rights">
+        <item>
+            It\'s not a crime to refuse to answer questions, but
+			refusing to answer might make the police suspicious
+			about you.
+        </item>
+        <item>
+            You must show your driver\'s license and registration 
+			when stopped in a car. Otherwise, you don\'t have to
+			answer any questions if you are detained or arrested, 
+			with one important exception. The police may ask for 
+			your name if you have been properly detained, and you 
+			can be arrested in some states for refusing to give it. If 
+			you reasonably fear that your name is incriminating, you 
+			can claim the right to remain silent, which may be a 
+			defense in case you are arrested anyway.
+        </item>
+        <item>
+             Police may “pat-down” your clothing if they suspect a 
+			concealed weapon. Don’t physically resist, but make it 
+			clear that you don’t consent to any further search
+        </item>
+        <item>
+            Ask if you are under arrest. If you are, you have a right 
+			to know why.
+        </item>
+        <item>
+            Don’t bad-mouth the police officer or run away, even 
+			if you believe what is happening is unreasonable. That 
+			could lead to your arrest. 
+        </item>
+    </string-array>
+    <string-array name="general_rights">
+        <item>
+             What you say to the police is always important. What 
+			you say can be used against you, and it can give the police 
+			an excuse to arrest you, especially if you badmouth a 
+			police officer
+        </item>
+        <item>
+            You must show your driver's license and registration 
+			when stopped in a car. Otherwise, you don't have to
+			answer any questions if you are detained or arrested, 
+			with one important exception. The police may ask for 
+			your name if you have been properly detained, and you 
+			can be arrested in some states for refusing to give it. If 
+			you reasonably fear that your name is incriminating, you 
+			can claim the right to remain silent, which may be a 
+			defense in case you are arrested anyway. 
+        </item>
+        <item>
+            You DO NOT have to consent to any search of yourself, 
+			your car or your house. If you DO consent to a search, it 
+			can affect your rights later in court. If the police say they 
+			have a search warrant, ASK TO SEE IT.
+        </item>
+        <item>
+            Do not interfere with, or obstruct the police – you
+			can be arrested for it. 
+        </item>
+        <item>
+            Think carefully about your words, movement, body 
+			language, and emotions.
+        </item>
+        <item>
+            Don\’t get into an argument with the police. 
+        </item>
+        <item>
+            Remember, anything you say or do can be used 
+			against you
+        </item>
+        <item>
+            Keep your hands where the police can see them.
+        </item>
+        <item>
+            Don\’t run. Don’t touch any police officer.
+        </item>
+        <item>
+            Don\’t resist even if you believe you are innocent. 
+        </item>
+        <item>
+            Don\’t complain on the scene or tell the police they\’re 
+			wrong or that you\’re going to file a complaint.
+        </item>
+        <item>
+            Do not make any statements regarding the incident. 
+        </item>
+        <item>
+            Ask for a lawyer immediately upon your arrest. 
+        </item>
+        <item>
+            Remember officers\’ badge and patrol car numbers. 
+        </item>
+        <item>
+             Write down everything you remember ASAP.
+        </item>
+        <item>
+            Try to find witnesses, their names and phone numbers.
+        </item>
+        <item>
+            If you are injured, take photographs of the injuries as 
+			soon as possible, but make sure you seek medical 
+			attention first.
+        </item>
+        <item>
+            If you feel your rights have been violated, file a written 
+			complaint with the police department’s internal affairs 
+			division, visit www.aclu-nj.org/profiling or call the 
+			ACLU hotline at 877-6-PROFILE.
+        </item>
+    </string-array>
     
 </resources>
