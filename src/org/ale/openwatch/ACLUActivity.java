@@ -13,8 +13,9 @@ public class ACLUActivity extends Activity{
 	
 	 public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.about);
 			requestWindowFeature(Window.FEATURE_NO_TITLE);
+			setContentView(R.layout.about);
+			
 			Button donateButton = (Button) findViewById(R.id.donateb);
 			
 			donateButton.setOnClickListener(new OnClickListener(){

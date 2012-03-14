@@ -23,7 +23,7 @@
 		         android:paddingBottom="0dip"
 		         android:paddingLeft="10dip"
 		         android:paddingRight="10dip"
-		         android:paddingTop="20dip"
+		         android:paddingTop="10dip"
 		         android:scaleType="fitCenter"
 		         android:src="@drawable/aclu_logo" >
 
@@ -45,10 +45,10 @@
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:layout_gravity="center"
-	                android:text="Powered by OpenWatch"
+	                android:text="Powered by OpenWatch.net"
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
-	                android:textSize="24dp"
+	                android:textSize="22dp"
 	                android:paddingBottom="20dip"
 	                android:textStyle="italic" />
 	            
@@ -120,19 +120,6 @@
 				</RelativeLayout>
 
 </LinearLayout>
-	<TextView  
-			    android:layout_width="fill_parent" 
-			    android:layout_height="wrap_content" 
-			    android:text="www.openwatch.net"
-			    android:id="@+id/url"
-			    android:textColor="#A3A3A3"
-			    android:shadowColor="#fff"
-				android:shadowRadius="1"
-				android:shadowDy="1"
-		    	android:textAppearance="?android:attr/textAppearanceSmall"
-			    android:gravity="center"
-			    android:paddingBottom="5dip"
-			    android:layout_alignParentBottom="true"
-			     />
+
 
 </RelativeLayout>

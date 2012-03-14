@@ -52,7 +52,45 @@
     <string name="about">About</string>
     <string name="disclaimer">Information that is recorded and submitted via the ACLU-NJ Police Tape may be posted on the OpenWatch.net website and submitted to the ACLU-NJ for their use in advocating for better, more accountable police practices. DO NOT submit recordings that you do not wish to expose to public view. If you believe that a recording contains information that may subject you to criminal or civil liability or undermine your ability to pursue legal remedies, you may wish to consult an attorney prior to submitting your recording.</string>
     <string name="contactACLU">Contact ACLU-NJ</string>
-    <string name="EULA">eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text eula text </string>
+    <string name="EULA">
+        The American Civil Liberties Union of New Jersey (“ACLU-NJ”) is a private, non-profit 
+organization devoted to defending the principles of freedom, justice and equality outlined 
+in the Bill of Rights of the United States Constitution. 
+The ACLU-NJ has worked diligently to protect citizens’ First Amendment rights and to 
+ensure police accountability.  Recording police officers while they perform their public 
+duties fits squarely within both areas.  We are therefore proud, in conjunction with 
+OpenWatch.net, to provide this ACLU-NJ Police Tape App (“the App”). 
+The ACLU-NJ believes that citizens enjoy the right to film police officers as they 
+perform their duties in public spaces.  That right is not without limits.  The right to tape is 
+limited by the right of public access.  In other words, a person cannot record from areas 
+where the police can legitimately exclude him (within a line of police tape, for example).  
+In some situations, resisting commands  made by law enforcement, even unlawful 
+commands, can lead to an arrest or otherwise expose a person to criminal liability.   
+While the ACLU-NJ believes that the United States and the New Jersey Constitutions 
+protect the right to film or record officers in public, some states take a contrary view.  For 
+that reason, the ACLU-NJ Police Accountability App is designed for use only in New 
+Jersey.  Before you use the App in another state or jurisdiction, please consult applicable 
+laws and court decisions. 
+Information that is recorded and submitted via the App will be posted on the 
+OpenWatch.net’s publically available website and will also be submitted to the ACLUNJ for their use in advocating for better, more accountable police practices.  DO NOT 
+submit recordings that you do not wish to expose to public view.  If you believe the 
+recording contains information that may subject you to criminal or civil liability or 
+undermine your ability to pursue legal remedies, you may wish to consult an attorney 
+prior to submitting your recording. 
+I agree that I am responsible for any recordings that I make using the App.  Neither the 
+ACLU-NJ nor OpenWatch.net is responsible if my recording breaks any laws, subjects 
+me to civil liability, or affects my ability to pursue legal remedies. 
+Information that is recorded and submitted via the ACLU-NJ Police Tape App will be 
+posted on the OpenWatch.net website and submitted to the ACLU-NJ for their use in 
+advocating for better, more accountable police practices.  DO NOT submitted recordings 
+that you do not wish to expose to public view.  If you believe that a recording contains 
+information that may subject you to criminal or civil liability or undermine your ability to 
+pursue legal remedies, you may wish to consult an attorney  prior to submitting your 
+recording.
+    </string>
+    <string name="aboutaclu">
+        The ACLU is the premier guardian of liberty and the U.S. Constitution, working to defend our rights in courts, legislatures and communities. Founded in 1920, the non-partisan organization has affiliates in all 50 states, including New Jersey and works to extend rights to segments of our population that have traditionally been denied their rights. For more information about our work, visit www.aclu-nj.org.
+    </string>
     <string name="bulletListTest">
         <![CDATA[
         <ol><li>item 1\n</li><li>item 2\n</li></ol>
@@ -61,6 +99,9 @@
 		]]>
 	</string>
     <string-array name="car_rights">
+        <item>
+            If You\'re Stopped In Your Car
+        </item>
         <item>  
 	        Upon request, show them your driver’s license, registration, and proof of insurance. In certain cases, your car 
 			can be searched without a warrant as long as the police 
@@ -83,6 +124,9 @@
     </string-array>
     <string-array name="home_rights">
         <item>
+            If Police Come to Your Home
+        </item>
+        <item>
             If the police knock and ask to enter your home, you
 			don’t have to admit them unless they have a warrant
 			signed by a judge.
@@ -100,6 +144,9 @@
 		</item>
     </string-array>
     <string-array name="arrest_rights">
+        <item>
+            If You\'re Detained or Under Arrest
+        </item>
         <item>
             You have the right to remain silent and to talk to a 
 			lawyer before you talk to the police. Tell the police 
@@ -131,6 +178,9 @@
     </string-array>
     <string-array name="stop_rights">
         <item>
+            Handling Police Contact
+        </item>
+        <item>
             It\'s not a crime to refuse to answer questions, but
 			refusing to answer might make the police suspicious
 			about you.
@@ -160,17 +210,15 @@
 			if you believe what is happening is unreasonable. That 
 			could lead to your arrest. 
         </item>
-    </string-array>
-    <string-array name="general_rights">
         <item>
-             What you say to the police is always important. What 
+            What you say to the police is always important. What 
 			you say can be used against you, and it can give the police 
 			an excuse to arrest you, especially if you badmouth a 
 			police officer
         </item>
         <item>
-            You must show your driver's license and registration 
-			when stopped in a car. Otherwise, you don't have to
+            You must show your driver\'s license and registration 
+			when stopped in a car. Otherwise, you don\'t have to
 			answer any questions if you are detained or arrested, 
 			with one important exception. The police may ask for 
 			your name if you have been properly detained, and you 
@@ -236,8 +284,7 @@
         <item>
             If you feel your rights have been violated, file a written 
 			complaint with the police department’s internal affairs 
-			division, visit www.aclu-nj.org/profiling or call the 
-			ACLU hotline at 877-6-PROFILE.
+			division, visit www.aclu-nj.org/profiling
         </item>
     </string-array>
     

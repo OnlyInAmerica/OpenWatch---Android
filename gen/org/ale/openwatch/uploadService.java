@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Users\\Dbro\\Documents\\git\\OpenWatchACLU\\OpenWatchACLU\\src\\org\\aclu\\nj\\uploadService.aidl
+ * Original file: /Users/dbro/Documents/workspace/OpenWatchACLU/src/org/aclu/nj/uploadService.aidl
  */
 package org.ale.openwatch;
 public interface uploadService extends android.os.IInterface

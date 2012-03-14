@@ -17,7 +17,7 @@
         android:orientation="vertical"
         android:padding="5dip"
         android:layout_width="fill_parent"
-        android:layout_height="400dip"
+        android:layout_height="wrap_content"
         android:background="#ffffff" >
 		
         <RelativeLayout
@@ -70,13 +70,13 @@
         <ScrollView
 	    android:orientation="vertical"
 	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
+	    android:layout_height="wrap_content"
 	    >
             	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 		        android:id="@+id/linearLayout1"
 		        android:orientation="vertical"
 		        android:layout_width="fill_parent"
-		        android:layout_height="fill_parent">
+		        android:layout_height="wrap_content">
 	            
             	    <TextView
             	        android:id="@+id/About"
@@ -84,7 +84,7 @@
             	        android:layout_height="wrap_content"
             	        android:layout_centerHorizontal="true"
             	        android:layout_gravity="center"
-            	        android:text="User Agreement"
+            	        android:text="About ACLU-NJ"
             	        android:textAppearance="?android:attr/textAppearanceLarge"
             	        android:textColor="#000000"
             	        android:textSize="24dp"
@@ -95,10 +95,11 @@
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:layout_centerHorizontal="true"
-	                android:text="Scrollable About ACLU text"
+	                android:text="@string/aboutaclu"
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
 	                android:textSize="14dp"
+	                android:paddingBottom="10dp"
 	                />
 					
 				</LinearLayout>
