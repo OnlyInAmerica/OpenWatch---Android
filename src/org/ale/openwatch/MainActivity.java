@@ -37,6 +37,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnTouchListener;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,7 +61,7 @@ public class MainActivity extends Activity {
     private MainActivityGroup mag;
     private LinearLayout root;
     
-    private static final String PREFS = "EULA_ACCEPTED";
+    private static final String PREFS = "USER_STATE";
     private SharedPreferences prefs;
 	private SharedPreferences.Editor editor;
 	private static final int EULA_CODE = 0;
@@ -91,6 +92,17 @@ public class MainActivity extends Activity {
 			if (data.getBooleanExtra("agreed", false)) {
 		        editor.putBoolean("eula_accepted", true);
 		        editor.commit();
+		        
+		        //After EULA accept, check to see if user has been greeted
+		        String first = prefs.getString("first_time", "fuck");
+		        if(first.contains("fuck")){
+		            new AlertDialog.Builder(this)
+		            .setMessage("Welcome to Police Tape! \n\n This application allows opportunistic citizen journalists to invisibly record public and private officials and post the recordings to a central website, openwatch.net. A guide to using the application is availble in the Tutorial in the menu. More information about the OpenWatch can be found in the About section.")
+		            .setPositiveButton("Okay!", null)
+		            .show();
+		            editor.putString("first_time", "shitballs");
+		            editor.commit();
+		        }
 			}
 			else{
 				finish();
@@ -116,10 +128,10 @@ public class MainActivity extends Activity {
         final Context c = this;
 
         final MainActivity ma = this;
-        
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        final SharedPreferences.Editor editor;
+        prefs = getSharedPreferences(PREFS, 0);
         editor = prefs.edit();
+        //final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        //final SharedPreferences.Editor editor;
         activateButton();
         final Button kyr = (Button) findViewById(R.id.kib);
 
@@ -143,9 +155,7 @@ public class MainActivity extends Activity {
         final OnTouchListener realOTL = new OnTouchListener() {
 
             public boolean onTouch(View v, MotionEvent event) {
-                
 
-                
                 if(event.getAction() != MotionEvent.ACTION_DOWN) {
                     return false;
                 }
@@ -154,22 +164,27 @@ public class MainActivity extends Activity {
                     return false;
                 }
                 
-                    if(recording){
+                if(recording){
                     return true;
                 }
+                if(!prefs.getBoolean("eula_accepted", false)){
+                	Intent i = new Intent(c, EulaActivity.class);
+            		startActivityForResult(i, EULA_CODE);
+            		return false;
+                }
                    
-                    else {
-                        mHandler.postDelayed(new Runnable() {
-
-                            public void run() {
-                                recording = true;
-                                ib.setClickable(false);
-                                ra.start();
-                            }}, 400);
-
-                        ib.setBackgroundResource(R.drawable.buttonpressed);
-                        return true;
-                        }
+                    else {                    	
+	                        mHandler.postDelayed(new Runnable() {
+	
+	                            public void run() {
+	                                recording = true;
+	                                ib.setClickable(false);
+	                                ra.start();
+	                            }}, 400);
+	
+	                        ib.setBackgroundResource(R.drawable.buttonpressed);
+                    	return true;
+                    }
             }
         };
         
@@ -271,6 +286,11 @@ public class MainActivity extends Activity {
                
                if(event.getAction() != MotionEvent.ACTION_DOWN) {
                    return false;
+               }
+               if(!prefs.getBoolean("eula_accepted", false)){
+               	Intent i = new Intent(c, EulaActivity.class);
+           		startActivityForResult(i, EULA_CODE);
+           		return false;
                }
                
                    mHandler.postDelayed(new Runnable() {

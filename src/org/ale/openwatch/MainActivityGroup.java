@@ -62,6 +62,8 @@ public class MainActivityGroup extends ActivityGroup {
     recordService r_service;
     uploadService u_service;
     boolean stoppedPrematurely = false;
+    
+    private static final String PREFS = "USER_STATE";
 
     private ServiceConnection r_connection = new ServiceConnection(){
 
@@ -156,7 +158,6 @@ public class MainActivityGroup extends ActivityGroup {
                         startActivity(mainIntent);
 //                                    u_service.start();
                     }});
-
                 finish();
         }});
         alert2.setNegativeButton(getString(R.string.no_quit), new DialogInterface.OnClickListener() {
@@ -307,7 +308,7 @@ public class MainActivityGroup extends ActivityGroup {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.group);
         
         c = this;
@@ -354,19 +355,11 @@ public class MainActivityGroup extends ActivityGroup {
         vol = mgr.getStreamVolume(AudioManager.STREAM_SYSTEM);
         mgr.setStreamVolume(AudioManager.STREAM_SYSTEM, 0, 0);
         
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        SharedPreferences prefs = getSharedPreferences(PREFS, 0);
+        SharedPreferences.Editor editor = prefs.edit();
         
-        final SharedPreferences.Editor editor2;
-        String first = prefs.getString("first_time", "fuck");
-        if(first.contains("fuck")){
-            new AlertDialog.Builder(this)
-            .setMessage("Welcome to Police Tape! \n\n This application allows opportunistic citizen journalists to invisibly record public and private officials and post the recordings to a central website, openwatch.net. A guide to using the application is availble in the Tutorial in the menu. More information about the OpenWatch can be found in the About section.")
-            .setPositiveButton("Okay!", null)
-            .show();
-            editor2 = prefs.edit();
-            editor2.putString("first_time", "shitballs");
-            editor2.commit();
-        }
+        
         
         code = prefs.getString("code", "BBB");
         codeLeft = code;
