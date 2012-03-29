@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">OpenWatch Recorder</string>
+    <string name="app_name">Police Tape</string>
     <string name="record_video">Record Audio</string>
     <string name="record_audio">Record Video</string>
     <string name="recording_saved">Recording saved</string>
@@ -27,7 +27,7 @@
     <string name="tutorial">Tutorial</string>
     <string name="upload_or_play">Upload or Play?</string>
     <string name="play">Play</string>
-    <string name="about_text">OpenWatch is a participatory citizen media project aiming to provide documentary evidence of uses and abuses of power.\n\
+    <string name="about_text">Police Tape is part of OpenWatch, a participatory citizen media project aiming to provide documentary evidence of uses and abuses of power.\n\
 
 				Until now, surveillance technology has only been in the hands of those who are already in power, which means it cannot be used to combat the largest problem facing modern society: abuse of power.\n\n
 				So the question remains: Who watches the watchers? \n\n

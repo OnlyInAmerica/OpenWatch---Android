@@ -10,6 +10,7 @@
    		android:id="@+id/stripey"
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
+	    android:layout_marginTop="-5dp"
 	    android:src="@drawable/stripey" />
         
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,7 +29,7 @@
             
             <ImageView
                 android:id="@+id/aclu"
-                android:layout_width="150dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/aclu_logo_small" />
 
@@ -47,10 +48,13 @@
 	                android:layout_height="wrap_content"
 	                android:layout_alignParentTop="true"
 	                android:layout_centerHorizontal="true"
-	                android:text="Police Tape"
+	                android:text="POLICE TAPE"
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
-	                android:textSize="28dp"
+	                android:background="#FFD000"
+	                android:paddingLeft="5dp"
+	                android:paddingRight="5dp"
+	                android:textSize="24dp"
 	                android:textStyle="bold" />
 				
 	            <TextView
@@ -79,16 +83,39 @@
 		        android:layout_height="fill_parent">
 
             	    <TextView
-            	        android:id="@+id/EULA"
+            	        android:id="@+id/UserAgreementTitle"
             	        android:layout_width="wrap_content"
             	        android:layout_height="wrap_content"
             	        android:layout_centerHorizontal="true"
             	        android:layout_gravity="center"
+            	        android:paddingTop="10dp"
+            	        android:paddingBottom="10dp"
             	        android:text="User Agreement"
             	        android:textAppearance="?android:attr/textAppearanceLarge"
             	        android:textColor="#000000"
             	        android:textSize="24dp"
             	        android:textStyle="bold" />
+            	    
+            	    
+            	    <TextView
+            	        android:id="@+id/UserAgreementTitle"
+            	        android:layout_width="wrap_content"
+            	        android:layout_height="wrap_content"
+            	        android:layout_centerHorizontal="true"
+            	        android:layout_gravity="center"
+            	        android:paddingTop="10dp"
+            	        android:paddingBottom="20dp"
+            	        android:text="Scroll Down to Agree"
+            	        android:textAppearance="?android:attr/textAppearanceLarge"
+            	        android:textColor="#000000"
+            	        android:textSize="20dp"
+            	        android:textStyle="bold" />
+            	    <ImageView
+				   		android:id="@+id/down_arrow"
+					    android:layout_width="fill_parent" 
+					    android:layout_height="wrap_content"
+					    android:paddingBottom="20dp" 
+					    android:src="@drawable/down_arrow" />
             	    
 					<TextView
 	                android:id="@+id/EULA"
@@ -98,13 +125,14 @@
 	                android:text="@string/EULA"
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
-	                android:textSize="14dp"
+	                android:textSize="18dp"
 	                />
 					
 					<RelativeLayout
 					    android:id="@+id/buttonHolder"
 					    android:layout_width="match_parent"
 					    android:layout_height="wrap_content"
+					    android:paddingTop="20dp"
 					    android:layout_centerHorizontal="true"
 					    android:layout_toRightOf="@+id/aclu"
 					    android:gravity="center_horizontal"
@@ -113,7 +141,7 @@
 					    <Button
 					        android:id="@+id/eulaYesB"
 					        android:layout_width="100dip"
-					        android:layout_height="60dip"
+					        android:layout_height="wrap_content"
 					        android:layout_alignParentLeft="true"
 					        android:background="@drawable/button"
 					        android:ellipsize="none"
@@ -122,14 +150,14 @@
 					        android:shadowDy="-1"
 					        android:shadowRadius="1"
 					        android:singleLine="true"
-					        android:text="Yes"
+					        android:text="Agree"
 					        android:textAppearance="?android:attr/textAppearanceMedium"
 					        android:textColor="#000000" />
 
 					    <Button
 					        android:id="@+id/eulaNoB"
 					        android:layout_width="100dip"
-					        android:layout_height="60dip"
+					        android:layout_height="wrap_content"
 					        android:layout_marginLeft="20dp"
 					        android:layout_toRightOf="@+id/eulaYesB"
 					        android:background="@drawable/button"
@@ -139,7 +167,7 @@
 					        android:shadowDy="-1"
 					        android:shadowRadius="1"
 					        android:singleLine="true"
-					        android:text="No"
+					        android:text="Quit"
 					        android:textAppearance="?android:attr/textAppearanceMedium"
 					        android:textColor="#000000" />
 	                

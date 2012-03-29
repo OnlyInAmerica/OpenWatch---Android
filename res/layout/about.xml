@@ -10,6 +10,7 @@
    		android:id="@+id/stripey"
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
+	    android:layout_marginTop="-5dp"
 	    android:src="@drawable/stripey" />
         
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,43 +29,11 @@
             
             <ImageView
                 android:id="@+id/aclu"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:src="@drawable/aclu_logo_small" />
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/aclu"
-                android:orientation="vertical" >
-            
-            <TextView
-	                android:id="@+id/PoliceTape"
-	                android:layout_marginTop="10dp"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignParentTop="true"
-	                android:layout_centerHorizontal="true"
-	                android:text="Police Tape"
-	                android:textAppearance="?android:attr/textAppearanceLarge"
-	                android:textColor="#000000"
-	                android:textSize="28dp"
-	                android:textStyle="bold" />
-				
-	            <TextView
-	                android:id="@+id/PoliceTapeTag"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_below="@+id/PoliceTape"
-	                android:layout_centerHorizontal="true"
-	                android:text="Powered by OpenWatch"
-	                android:textAppearance="?android:attr/textAppearanceLarge"
-	                android:textColor="#000000"
-	                android:textSize="14dp"
-	                android:textStyle="italic" />
-	    </RelativeLayout>
+           
         </RelativeLayout>
         
         <ScrollView
@@ -78,17 +47,6 @@
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content">
 	            
-            	    <TextView
-            	        android:id="@+id/About"
-            	        android:layout_width="wrap_content"
-            	        android:layout_height="wrap_content"
-            	        android:layout_centerHorizontal="true"
-            	        android:layout_gravity="center"
-            	        android:text="About ACLU-NJ"
-            	        android:textAppearance="?android:attr/textAppearanceLarge"
-            	        android:textColor="#000000"
-            	        android:textSize="24dp"
-            	        android:textStyle="bold" />
 
 					<TextView
 	                android:id="@+id/Disclaimer"
@@ -96,10 +54,11 @@
 	                android:layout_height="wrap_content"
 	                android:layout_centerInParent="true"
 	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="10dp"
 	                android:text="@string/aboutaclu"
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
-	                android:textSize="14dp"
+	                android:textSize="18dp"
 	                android:paddingBottom="10dp"
 	                />
 					

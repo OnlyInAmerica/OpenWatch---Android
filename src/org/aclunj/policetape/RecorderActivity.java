@@ -1,8 +1,7 @@
-package org.ale.openwatch;
-
+package org.aclunj.policetape;
 import java.io.IOException;
 
-import org.ale.openwatch.R;
+import org.aclunj.policetape.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

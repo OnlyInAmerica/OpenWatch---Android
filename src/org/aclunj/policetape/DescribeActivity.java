@@ -1,6 +1,6 @@
-package org.ale.openwatch;
+package org.aclunj.policetape;
 
-import org.ale.openwatch.MyLocation.LocationResult;
+import org.aclunj.policetape.MyLocation.LocationResult;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -69,7 +71,7 @@ public class DescribeActivity extends Activity{
           c = this;
           //no title bar
           requestWindowFeature(Window.FEATURE_NO_TITLE);
-          //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+          getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
           setContentView(R.layout.profile);
           
           lead = (TextView) findViewById(R.id.carrier);
@@ -81,6 +83,10 @@ public class DescribeActivity extends Activity{
           p = (ProgressBar) findViewById(R.id.progressbar);
           locationSwitch = (Button) findViewById(R.id.locationButton);
           locationText = (TextView) findViewById(R.id.location_text);
+          
+          TextView txt = (TextView) findViewById(R.id.PoliceTape);  
+          Typeface font = Typeface.createFromAsset(getAssets(), "Roboto-Bold.ttf");  
+          txt.setTypeface(font);
           
 	      lead.setText(getString(R.string.please_describe));
 	      

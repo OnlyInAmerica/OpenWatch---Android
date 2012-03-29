@@ -1,4 +1,4 @@
-package org.ale.openwatch;
+package org.aclunj.policetape;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
-import org.ale.openwatch.R;
+import org.aclunj.policetape.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -23,6 +23,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -77,6 +78,10 @@ public class MainActivity extends Activity {
         prefs = getSharedPreferences(PREFS, 0);
         editor = prefs.edit();
         
+        TextView txt = (TextView) findViewById(R.id.PoliceTape);  
+        Typeface font = Typeface.createFromAsset(getAssets(), "Roboto-Bold.ttf");  
+        txt.setTypeface(font);
+        
         vr = (VideoRecorder) findViewById(R.id.camcorder_preview);
         c = this;
         
@@ -97,7 +102,7 @@ public class MainActivity extends Activity {
 		        String first = prefs.getString("first_time", "fuck");
 		        if(first.contains("fuck")){
 		            new AlertDialog.Builder(this)
-		            .setMessage("Welcome to Police Tape! \n\n This application allows opportunistic citizen journalists to invisibly record public and private officials and post the recordings to a central website, openwatch.net. A guide to using the application is availble in the Tutorial in the menu. More information about the OpenWatch can be found in the About section.")
+		            .setMessage("Welcome to Police Tape! \n\n This application allows opportunistic citizen journalists to invisibly record public and private officials and post the recordings to a central website, openwatch.net. A guide to using the application is availble in the Tutorial in the menu. More information about the OpenWatch project can be found in the About section.")
 		            .setPositiveButton("Okay!", null)
 		            .show();
 		            editor.putString("first_time", "shitballs");

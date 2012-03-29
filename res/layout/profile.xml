@@ -9,6 +9,7 @@
    		android:id="@+id/stripey"
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
+	    android:layout_marginTop="-5dp"
 	    android:src="@drawable/stripey" />
 
 <ScrollView
@@ -29,21 +30,13 @@
 	        android:orientation="horizontal"
 	        android:padding="0dip" >
 
-	        <RelativeLayout
-	            android:id="@+id/relativeLayout1"
-	            android:layout_width="100dp"
-	            android:layout_height="wrap_content"
-	            android:orientation="horizontal"
-	            android:padding="0dip" >
-
-	            <ImageView
+	        <ImageView
 	                android:id="@+id/aclu"
-	                android:layout_width="wrap_content"
+	                android:layout_width="100dp"
 	                android:layout_height="wrap_content"
 	                android:layout_alignParentLeft="true"
 	                android:layout_alignParentTop="true"
 	                android:src="@drawable/aclu_logo_small" />
-	        </RelativeLayout>
 
 	        <Button
 	            android:id="@+id/locationButton"
@@ -73,30 +66,35 @@
 	        <RelativeLayout
 	            android:layout_width="150dp"
 	            android:layout_height="fill_parent"
+	            android:layout_toRightOf="@+id/aclu"
 	            android:layout_alignParentTop="true"
+	            android:gravity="center_horizontal"
 	            android:orientation="vertical"
-	            android:layout_centerInParent="true"
-	            android:padding="0dip" >
+	            android:paddingLeft="5dp"
+	            android:paddingRight="5dp" >
 
 	            <TextView
 	                android:id="@+id/PoliceTape"
-	                android:layout_width="wrap_content"
+	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:layout_alignParentTop="true"
 	                android:layout_centerHorizontal="true"
-	                android:text="Police Tape"
+	                android:layout_marginTop="1dp"
+	                android:gravity="center_horizontal"
+	                android:text="POLICE TAPE"
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
+	                android:background="#FFD000"
 	                android:textSize="16dp"
 	                android:textStyle="bold" />
 
 	            <TextView
 	                android:id="@+id/PoliceTapeTag"
-	                android:layout_width="wrap_content"
+	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:layout_below="@+id/PoliceTape"
 	                android:layout_centerHorizontal="true"
 	                android:text="Powered by OpenWatch"
+	                android:gravity="center_horizontal"
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
 	                android:textSize="12dp"
@@ -108,15 +106,16 @@
 	    <TextView
 	        android:id="@+id/carrier"
 	        android:layout_width="wrap_content"
-	        android:layout_height="32dp"
+	        android:layout_height="wrap_content"
 	        android:text="@string/please_describe"
 	        android:textAppearance="?android:attr/textAppearanceLarge"
-	        android:textColor="#EB1D1D" />
+	        android:textColor="#1a5a91" />
 
 	    <TextView
 	        android:id="@+id/num_desc"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:layout_marginTop="-20dp"
 	        android:padding="3dip"
 	        android:text="@string/title"
 	        android:textAppearance="?android:attr/textAppearanceSmall"

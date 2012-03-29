@@ -10,6 +10,7 @@
    		android:id="@+id/stripey"
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
+	    android:layout_marginTop="-5dp"
 	    android:src="@drawable/stripey" />
         
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,7 +29,7 @@
             
             <ImageView
                 android:id="@+id/aclu"
-                android:layout_width="150dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/aclu_logo_small" />
 
@@ -47,9 +48,12 @@
 	                android:layout_height="wrap_content"
 	                android:layout_alignParentTop="true"
 	                android:layout_centerHorizontal="true"
-	                android:text="Police Tape"
+	                android:paddingLeft="5dp"
+	                android:paddingRight="5dp"
+	                android:text="POLICE TAPE"
 	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="#000000"
+	                android:background="#FFD000"
 	                android:textSize="28dp"
 	                android:textStyle="bold" />
 				
@@ -77,29 +81,30 @@
 		        android:orientation="vertical"
 		        android:layout_width="fill_parent"
 		        android:layout_height="fill_parent">
+	            
+	            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:id="@+id/detailsTouchLayout"
+		        android:orientation="vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent">
+	            <TextView
+	                android:id="@+id/clearQuestionTv"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:text="May we use your recording to advocate for accountable police practices?"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#000000"
+	                android:textSize="28dp"
+	                android:paddingBottom="10dp"
+	                />
 
-					<TextView
-	                android:id="@+id/Disclaimer"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_centerHorizontal="true"
-	                android:text="@string/disclaimer"
-	                android:textAppearance="?android:attr/textAppearanceLarge"
-	                android:textColor="#000000"
-	                android:textSize="14dp"
-	                />
-					<TextView
-	                android:id="@+id/DisclaimerSubmitQ"
-	                android:padding="10dp"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_centerHorizontal="true"
-	                android:text="Submit recording?"
-	                android:textAppearance="?android:attr/textAppearanceLarge"
-	                android:textStyle="bold"
-	                android:textColor="#000000"
-	                android:textSize="14dp"
-	                />
+					<ImageView
+			   		android:id="@+id/info"
+				    android:layout_width="fill_parent" 
+				    android:layout_height="wrap_content" 
+				    android:src="@drawable/info" />
+				</LinearLayout>
 					
 					<RelativeLayout
 					    android:id="@+id/buttonHolder"
@@ -113,49 +118,55 @@
 					    <Button
 					        android:id="@+id/yessirb"
 					        android:layout_width="250dip"
-					        android:layout_height="60dip"
+					        android:layout_height="wrap_content"
 					        android:layout_alignParentTop="true"
 					        android:background="@drawable/button"
 					        android:ellipsize="none"
 					        android:padding="20dip"
+					        android:layout_marginTop="20dp"
+					        android:layout_marginBottom="10dp"
 					        android:shadowColor="#ffffff"
 					        android:shadowDy="-1"
 					        android:shadowRadius="1"
 					        android:singleLine="true"
-					        android:text="Yes"
+					        android:text="Yes, Upload it!"
 					        android:textAppearance="?android:attr/textAppearanceMedium"
+					        android:textSize="20dp"
 					        android:textColor="#000000" />
 
 					    <Button
 					        android:id="@+id/nob"
 					        android:layout_width="250dip"
-					        android:layout_height="60dip"
+					        android:layout_height="wrap_content"
 					        android:layout_below="@+id/yessirb"
 					        android:background="@drawable/button"
 					        android:ellipsize="none"
 					        android:padding="20dip"
+					        android:layout_marginBottom="10dp"
 					        android:shadowColor="#ffffff"
 					        android:shadowDy="-1"
 					        android:shadowRadius="1"
 					        android:singleLine="true"
 					        android:text="No"
 					        android:textAppearance="?android:attr/textAppearanceMedium"
+					        android:textSize="20dp"
 					        android:textColor="#000000" />
 					    
 					    <Button
 					        android:id="@+id/contactb"
 					        android:layout_width="250dip"
-					        android:layout_height="60dip"
+					        android:layout_height="wrap_content"
 					        android:layout_below="@+id/nob"
 					        android:background="@drawable/button"
 					        android:ellipsize="none"
-					        android:padding="10dip"
+					        android:padding="20dip"
 					        android:shadowColor="#ffffff"
 					        android:shadowDy="-1"
 					        android:shadowRadius="1"
 					        android:singleLine="true"
 					        android:text="Contact ACLU-NJ"
 					        android:textAppearance="?android:attr/textAppearanceMedium"
+					        android:textSize="20dp"
 					        android:textColor="#000000" />
 	                
 					</RelativeLayout>

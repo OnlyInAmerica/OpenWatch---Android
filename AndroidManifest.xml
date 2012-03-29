@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="org.ale.openwatch"
+      package="org.aclunj.policetape"
       android:versionCode="5"
       android:versionName="1.4">
       <uses-sdk android:minSdkVersion="4" />
-    <application android:icon="@drawable/icon" android:label="@string/app_name" android:screenOrientation="landscape">
+    <application android:icon="@drawable/aclunj_icon" android:label="@string/app_name" android:screenOrientation="landscape">
         <activity android:name=".MainActivityGroup"
                   android:label="@string/app_name"
                   android:screenOrientation="portrait">

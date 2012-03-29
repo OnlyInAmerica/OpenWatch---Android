@@ -1,4 +1,4 @@
-package org.ale.openwatch;
+package org.aclunj.policetape;
 
 import android.app.Activity;
 import android.content.Intent;
