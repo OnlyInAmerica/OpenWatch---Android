@@ -84,10 +84,6 @@ public class DescribeActivity extends Activity{
           locationSwitch = (Button) findViewById(R.id.locationButton);
           locationText = (TextView) findViewById(R.id.location_text);
           
-          TextView txt = (TextView) findViewById(R.id.PoliceTape);  
-          Typeface font = Typeface.createFromAsset(getAssets(), "Roboto-Bold.ttf");  
-          txt.setTypeface(font);
-          
 	      lead.setText(getString(R.string.please_describe));
 	      
 	      /*

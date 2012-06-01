@@ -327,9 +327,10 @@ public class MainActivityGroup extends ActivityGroup {
 
         // A little hacky, but otherwise we get an annoying black line where the
         // seam of the drawer's edge is.
+        /*
         if(Integer.parseInt(Build.VERSION.SDK) < 14)
         	((FrameLayout)((ViewGroup) v).getChildAt(0)).setForeground(null);
-        
+        */
     
         Intent j = new Intent(this, MainActivity.class);
         // Ensure that only one ListenActivity can be launched. Otherwise, we may

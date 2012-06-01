@@ -218,7 +218,7 @@ public class MainActivity extends Activity {
                 return true;
             }
         };
-        
+        /* OPENWATCH VIDEO RECORD LISTENERS
         String first = prefs.getString("warned", "fuck");
         if(first.contains("fuck")){
             ib.setOnTouchListener(fakeOTL);
@@ -226,6 +226,10 @@ public class MainActivity extends Activity {
         else{
             ib.setOnTouchListener(realOTL);
         }
+        */
+        // POLICE TAPE VIDEO RECORD LISTENER
+        ib.setOnTouchListener(realOTL);
+        
         
        if(recording) {
            ib.setBackgroundResource(R.drawable.buttonpressed);

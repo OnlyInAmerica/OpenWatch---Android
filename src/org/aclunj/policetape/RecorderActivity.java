@@ -10,11 +10,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -33,7 +35,7 @@ public class RecorderActivity extends Activity {
     public boolean hidden = false;
     final Handler mHandler = new Handler();
     public VideoRecorder vr;
-    private ImageView iv;
+    //private ImageView iv;
     private FrameLayout fl;
     private MainActivityGroup mag;
     private Activity mainer;
@@ -48,7 +50,7 @@ public class RecorderActivity extends Activity {
         setContentView(R.layout.playa);
         
         vr = (VideoRecorder) findViewById(R.id.camcorder_preview);
-        iv = (ImageView) findViewById(R.id.hider);
+        //iv = (ImageView) findViewById(R.id.hider);
         co = this;
 
     }
@@ -69,7 +71,8 @@ public class RecorderActivity extends Activity {
     
     public void start() {
             vr.setVisibility(View.VISIBLE);
-            iv.setVisibility(View.VISIBLE);
+            Log.d("RecorderActivity","vr VISIBLE");
+            //iv.setVisibility(View.VISIBLE);
             hidden = true;
             
             final VideoRecorder vvv = vr;
@@ -98,7 +101,7 @@ public class RecorderActivity extends Activity {
                         recording = false;
                         vvv.stop();
                         vr.setVisibility(View.GONE);
-                        iv.setVisibility(View.GONE);
+                        //iv.setVisibility(View.GONE);
                         hidden = false;
                     } catch (IOException e) {
                         e.printStackTrace();
