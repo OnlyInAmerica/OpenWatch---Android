@@ -2,7 +2,3 @@
 
 gen
 bin
-
-SECRETS.java
-lint.xml
-*.orig
