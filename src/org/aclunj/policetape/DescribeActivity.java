@@ -34,6 +34,7 @@ public class DescribeActivity extends Activity{
 	EditText title;
 	EditText pub_desc;
 	EditText priv_desc;
+	EditText email;
 	Button b;
 	ProgressBar p;
 	TextView loading;
@@ -76,14 +77,11 @@ public class DescribeActivity extends Activity{
           title = (EditText) findViewById(R.id.title);
           pub_desc = (EditText) findViewById(R.id.pub_desc);
           priv_desc = (EditText) findViewById(R.id.priv_desc);
+          email = (EditText) findViewById(R.id.email);
           b = (Button) findViewById(R.id.thebutton);
           p = (ProgressBar) findViewById(R.id.progressbar);
           locationSwitch = (Button) findViewById(R.id.locationButton);
           locationText = (TextView) findViewById(R.id.location_text);
-          
-          TextView txt = (TextView) findViewById(R.id.PoliceTape);  
-          Typeface font = Typeface.createFromAsset(getAssets(), "Roboto-Bold.ttf");  
-          txt.setTypeface(font);
           
 	      lead.setText(getString(R.string.please_describe));
 	      
@@ -197,7 +195,7 @@ public class DescribeActivity extends Activity{
           
           startService(new Intent(this, uService.class));
           bindUploadService();
-	}
+	} // end onCreate
 	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -214,7 +212,9 @@ public class DescribeActivity extends Activity{
 		        final SharedPreferences.Editor editor = prefs.edit();
 		        editor.putString("pub_desc", pub_desc.getText().toString());
 		        editor.putString("priv_desc", priv_desc.getText().toString());
+		        editor.putString("email", email.getText().toString());
 	            editor.putString("title", title.getText().toString());
+	            
 	            
 	            if(hasLoc && switchOn) {
 	                editor.putString("location", lat + ", " + lon);

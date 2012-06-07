@@ -1,27 +1,55 @@
 package org.aclunj.policetape;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
+
 import org.aclunj.policetape.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.DialogInterface.OnClickListener;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Typeface;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.RemoteException;
+import android.preference.PreferenceManager;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnTouchListener;
+import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends Activity {
     /** Called when the activity is first created. */
@@ -74,7 +102,7 @@ public class MainActivity extends Activity {
 		        String first = prefs.getString("first_time", "fuck");
 		        if(first.contains("fuck")){
 		            new AlertDialog.Builder(this)
-		            .setMessage("Welcome to Police Tape! \n\n This application allows opportunistic citizen journalists to invisibly record public and private officials and post the recordings to a central website, openwatch.net. A guide to using the application is availble in the Tutorial in the menu. More information about the OpenWatch project can be found in the About section.")
+		            .setMessage("Welcome to Police Tape! \n\n This application allows opportunistic citizen journalists to invisibly record public and private officials and post the recordings to a central website, openwatch.net. A guide to using the application is availble in the Tutorial in the menu. More information about the ACLU and the OpenWatch project can be found in the About section.")
 		            .setPositiveButton("Okay!", null)
 		            .show();
 		            editor.putString("first_time", "shitballs");
@@ -190,16 +218,7 @@ public class MainActivity extends Activity {
                 return true;
             }
         };
-        /* OPENWATCH VIDEO RECORD BEHAVIOR:
-         * To "Record Video" Button, attach fakeOTL (presents AlertDialg w/ info re: old video recording behavior)
-         * Replace with realOTL (which commences recording) after AlertDialog displayed
-         * 
-         * POLICE TAPE VIDEO RECORD BEHAVIOR: 
-         * Commence Video Recording on first "Record Video" press. The camera preview is no longer hid
-         * so the old warning is not needed.
-         */
-        
-        /* OPENWATCH VIDEO RECORD TOUCH LISTENERS
+        /* OPENWATCH VIDEO RECORD LISTENERS
         String first = prefs.getString("warned", "fuck");
         if(first.contains("fuck")){
             ib.setOnTouchListener(fakeOTL);
@@ -208,9 +227,9 @@ public class MainActivity extends Activity {
             ib.setOnTouchListener(realOTL);
         }
         */
-        
-        /* POLICE TAPE VIDEO RECORD TOUCH LISTENER */
+        // POLICE TAPE VIDEO RECORD LISTENER
         ib.setOnTouchListener(realOTL);
+        
         
        if(recording) {
            ib.setBackgroundResource(R.drawable.buttonpressed);
