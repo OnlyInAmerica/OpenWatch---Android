@@ -2,3 +2,5 @@
 
 gen
 bin
+lint.xml
+SECRETS.java

@@ -5,7 +5,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.media.CamcorderProfile;
 import android.media.MediaRecorder;
@@ -66,7 +65,7 @@ public class VideoRecorder extends SurfaceView implements SurfaceHolder.Callback
   /**
    * Starts a new recording.
    */
-  @SuppressLint({ "NewApi", "NewApi" })
+  //@SuppressLint({ "NewApi", "NewApi" })
 public void start(Context c) throws IOException {
     String state = android.os.Environment.getExternalStorageState();
     if(!state.equals(android.os.Environment.MEDIA_MOUNTED))  {

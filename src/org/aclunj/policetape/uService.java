@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -58,6 +57,7 @@ public class uService extends Service{
     String pathToOurFile = "";
     String pubDesc = "";
     String privDesc = "";
+    String email = "";
     String title = "";
     String location = "XXX Unavailable XXX";
     String secUrlServer = "https://openwatch.net/uploadnocaptcha/";
@@ -105,6 +105,9 @@ public class uService extends Service{
     public void upload() {
         setDataFromPrefs();
         setDataFromPath();
+        
+        // For now, append email to privDesc
+        privDesc = privDesc + "[" + email+"]";
 
         try {
                 InputStream serverInput = ClientHttpRequest.post(
@@ -226,6 +229,7 @@ public class uService extends Service{
     public void setDataFromPrefs() {
         pubDesc = prefs.getString("pub_desc", "No description available");
         privDesc = prefs.getString("priv_desc", "No description available");
+        email = prefs.getString("email", "No email available");
         title = prefs.getString("title", "No title available");
         location = prefs.getString("location", "No location available");
     }
