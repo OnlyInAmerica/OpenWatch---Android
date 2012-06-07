@@ -23,7 +23,7 @@ public class ACLUActivity extends Activity{
 			donateButton.setOnClickListener(new OnClickListener(){
 			@Override
 				public void onClick(View arg0) {
-					Uri uri = Uri.parse( "http://www.aclu-nj.org/donate" );
+					Uri uri = Uri.parse( "https://www.aclu.org/secure/support-aclu-new-jersey" );
 					startActivity( new Intent( Intent.ACTION_VIEW, uri ) );
 				}
 			});

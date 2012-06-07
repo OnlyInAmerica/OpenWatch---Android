@@ -49,14 +49,19 @@
         
         <service android:name=".rService"/>
         <service android:name=".uService"/>
+        
+	    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+	    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+	    <uses-permission android:name="android.permission.CAMERA" />
+	    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	    <uses-permission android:name="android.permission.INTERNET" />
+	    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	  	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
 
+        <!-- Start of Crittercism.com Code -->
+		<activity android:name="com.crittercism.NotificationActivity"/>
+		<!-- End of Crittercism.com Code -->
     </application>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.RECORD_VIDEO" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-  	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission>
+
 
 </manifest> 
