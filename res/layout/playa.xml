@@ -7,11 +7,19 @@
     >
      <org.aclunj.policetape.VideoRecorder 
      	 android:id="@+id/camcorder_preview"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_width="1px"
+         android:layout_height="1px"
          android:enabled="false" 
          android:visibility="invisible"
          />
-
+ 
+     <ImageView
+     	android:id="@+id/hider"
+        android:layout_width="2000px"
+    	android:layout_height="2000px"
+    	android:src="@drawable/black"
+    	android:layout_marginTop="-10px"
+    	android:visibility="invisible"
+    	/>
 
 </LinearLayout>

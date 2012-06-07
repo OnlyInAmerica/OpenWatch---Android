@@ -39,7 +39,6 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.crittercism.app.Crittercism;
 
 public class MainActivityGroup extends ActivityGroup {
     /** Called when the activity is first created. */
@@ -303,7 +302,6 @@ public class MainActivityGroup extends ActivityGroup {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Crittercism.init(getApplicationContext(), SECRETS.Crittercism_ID);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.group);
@@ -324,10 +322,9 @@ public class MainActivityGroup extends ActivityGroup {
 
         // A little hacky, but otherwise we get an annoying black line where the
         // seam of the drawer's edge is.
-        /*
         if(Integer.parseInt(Build.VERSION.SDK) < 14)
         	((FrameLayout)((ViewGroup) v).getChildAt(0)).setForeground(null);
-        */
+        
     
         Intent j = new Intent(this, MainActivity.class);
         // Ensure that only one ListenActivity can be launched. Otherwise, we may
