@@ -121,23 +121,6 @@
 	        android:hint="@string/priv_ex"
 	        android:minLines="1" >
 	    </EditText>
-	    
-	    <TextView
-	        android:id="@+id/email_desc"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:padding="3dip"
-	        android:text="@string/email"
-	        android:textAppearance="?android:attr/textAppearanceSmall"
-	        android:textColor="#000000" />
-
-	    <EditText
-	        android:id="@+id/email"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:hint="@string/email_ex"
-	        android:minLines="1" >
-	    </EditText>
 
 	    <Button
 	        android:id="@+id/thebutton"
