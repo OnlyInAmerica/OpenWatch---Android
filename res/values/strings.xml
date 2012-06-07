@@ -14,7 +14,9 @@
     <string name="pub">Public description</string>
     <string name="pub_ex">ex, footage of a private security officer assaulting a man at an airport, a judge taking a bribe</string>
     <string name="priv">Private description</string>
-    <string name="priv_ex">Any notes you may which to tell the OW admins. Remove names, change voices, etc</string>
+    <string name="priv_ex">Optional: Any notes for the us. Ex: Remove names, change voices, etc</string>
+    <string name="email">Email</string>
+    <string name="email_ex">Optional: An email address where the ACLU-NJ can contact you regarding this incident.</string>
     <string name="upload">Upload!</string>
     <string name="please_describe">Please describe your recording!\n</string>
     <string name="location_on">Location: On</string>
