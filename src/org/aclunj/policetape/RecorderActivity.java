@@ -16,7 +16,7 @@ import android.widget.ImageView;
 public class RecorderActivity extends Activity {
     /** Called when the activity is first created. */
     
-    public boolean hidden = false;
+    public static boolean hidden = false;
     final Handler mHandler = new Handler();
     public VideoRecorder vr;
     //private ImageView iv;
@@ -31,7 +31,7 @@ public class RecorderActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.playa);
         
         vr = (VideoRecorder) findViewById(R.id.camcorder_preview);
@@ -52,6 +52,7 @@ public class RecorderActivity extends Activity {
     public void onResume() {
         super.onResume();
     }
+
        
     
     public void start() {

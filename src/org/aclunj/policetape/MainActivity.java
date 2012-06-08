@@ -119,6 +119,10 @@ public class MainActivity extends Activity {
                 if(event.getAction() != MotionEvent.ACTION_DOWN) {
                     return false;
                 }
+                // If video recording in progress, ignore touch
+                if(RecorderActivity.hidden == true){
+             	   return false;
+                }
                 kyr.setClickable(false);
                 kyr.setBackgroundResource(R.drawable.buttonpressed);
                 Intent i = new Intent(c, KnowYourRightsActivity.class);
@@ -136,7 +140,7 @@ public class MainActivity extends Activity {
                 if(event.getAction() != MotionEvent.ACTION_DOWN) {
                     return false;
                 }
-                
+
                 if(ra.hidden) {
                     return false;
                 }
@@ -277,10 +281,15 @@ public class MainActivity extends Activity {
                if(event.getAction() != MotionEvent.ACTION_DOWN) {
                    return false;
                }
+               // Check that EULA accepted
                if(!prefs.getBoolean("eula_accepted", false)){
                	Intent i = new Intent(c, EulaActivity.class);
            		startActivityForResult(i, EULA_CODE);
            		return false;
+               }
+               // If video recording in progress, ignore touch
+               if(RecorderActivity.hidden == true){
+            	   return false;
                }
                
                    mHandler.postDelayed(new Runnable() {

@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -50,8 +51,8 @@ public class MainActivityGroup extends ActivityGroup {
     private boolean r_servicedBind = false;
     private boolean u_servicedBind = false;
     private VideoRecorder vr;
-    private String code = "BBB";
-    private String codeLeft = "BBB";
+    private String code = "BB";
+    private String codeLeft = "BB";
     private Context c;
     RecorderActivity raActivity;
     MainActivity maActivity;
@@ -90,7 +91,8 @@ public class MainActivityGroup extends ActivityGroup {
         if(raActivity.hidden) {
         
             if (keyCode == KeyEvent.KEYCODE_BACK) {
-                if("B".equals(codeLeft.substring(0, 1))) {
+            	Log.d("Back_BTN",codeLeft);
+                if("B".equals(codeLeft.substring(0, 1))) { 
                     codeLeft = codeLeft.substring(1, codeLeft.length());
                 }
                 else {
@@ -359,7 +361,7 @@ public class MainActivityGroup extends ActivityGroup {
         
         
         
-        code = prefs.getString("code", "BBB");
+        code = prefs.getString("code", "BB");
         codeLeft = code;
         
         Intent intent = new Intent(rService.ACTION_FOREGROUND);

@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 
 import android.content.Context;
+import android.hardware.Camera;
 import android.media.CamcorderProfile;
 import android.media.MediaRecorder;
 import android.os.Build;
@@ -18,11 +19,12 @@ import android.view.WindowManager;
 
 public class VideoRecorder extends SurfaceView implements SurfaceHolder.Callback{
 
-  final MediaRecorder recorder = new MediaRecorder();
-  SurfaceHolder holder;
+ MediaRecorder recorder;
+ SurfaceHolder holder;
   String path;
   Context c;
-
+  Camera mCamera;
+  
   /**
    * Creates a new audio recording at the given path (relative to root of SD card).
    */
@@ -33,7 +35,23 @@ public class VideoRecorder extends SurfaceView implements SurfaceHolder.Callback
       holder = getHolder();
       holder.addCallback(this);
       holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+      //holder.lockCanvas().rotate(90);
+      //recorder.
+      
+      
 
+  }
+  
+  public static Camera getCameraInstance(){
+	  Camera c = null;
+	  try{
+		  c = Camera.open();
+	  }
+	  catch(Exception e){
+		  System.out.println("hmmmm");
+	  }
+	  return c;
+	  
   }
   
   public void setPath(String patha) {
@@ -81,23 +99,34 @@ public void start(Context c) throws IOException {
     WindowManager mWinMgr = (WindowManager)c.getSystemService(Context.WINDOW_SERVICE);
     int displayWidth = mWinMgr.getDefaultDisplay().getWidth();
 
-    if( ((Build.VERSION.SDK_INT) >= 8) && (displayWidth >= 480)) {
-        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        recorder.setVideoSource(MediaRecorder.VideoSource.DEFAULT);
-        recorder.setProfile(CamcorderProfile.get(CamcorderProfile.QUALITY_HIGH));
-    }
-    else{
-        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        recorder.setVideoSource(MediaRecorder.VideoSource.DEFAULT);
-        recorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-        recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        recorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);
-        recorder.setVideoFrameRate(30);
-        recorder.setVideoSize(320, 240);
-    }
+	mCamera = getCameraInstance();
+    mCamera.setDisplayOrientation(90);
+    recorder = new MediaRecorder();
+    recorder.setCamera(mCamera);
+
+    // Step 1: Unlock and set camera to MediaRecorder
+    mCamera.unlock();
+    recorder.setCamera(mCamera);
+
+    // Step 2: Set sources
+    recorder.setAudioSource(MediaRecorder.AudioSource.CAMCORDER);
+    recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+
+    // Step 3: Set a CamcorderProfile (requires API Level 8 or higher)
+    recorder.setProfile(CamcorderProfile.get(CamcorderProfile.QUALITY_HIGH));
+
+    // Step 4: Set output file
+    //mMediaRecorder.setOutputFile(getOutputMediaFile(MEDIA_TYPE_VIDEO).toString());
+
+    // Step 5: Set the preview output
+    //mMediaRecorder.setPreviewDisplay(mPreview.getHolder().getSurface());
+
+    // Step 6: Prepare configured MediaRecorder
+
     recorder.setOutputFile(path);
     Surface s = holder.getSurface();
     recorder.setPreviewDisplay(s);
+    
     recorder.prepare();
     recorder.start();
       }
