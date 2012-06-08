@@ -15,8 +15,6 @@ import java.lang.System;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import org.aclunj.policetape.recordService;
-
 public class rService extends Service{
     
     static final String ACTION_FOREGROUND = "com.example.android.apis.FOREGROUND";

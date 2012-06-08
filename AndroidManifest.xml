@@ -4,6 +4,13 @@
       android:versionCode="5"
       android:versionName="1.4">
       <uses-sdk android:minSdkVersion="4" />
+      <uses-permission android:name="android.permission.RECORD_AUDIO" />
+	    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+	    <uses-permission android:name="android.permission.CAMERA" />
+	    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	    <uses-permission android:name="android.permission.INTERNET" />
+	    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	  	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
     <application android:icon="@drawable/aclunj_icon" android:label="@string/app_name" android:screenOrientation="landscape">
         <activity android:name=".MainActivityGroup"
                   android:label="@string/app_name"
@@ -53,13 +60,7 @@
         <!-- Start of Crittercism.com Code -->
 		<activity android:name="com.crittercism.NotificationActivity"/>
 		
-		<uses-permission android:name="android.permission.RECORD_AUDIO" />
-	    <uses-permission android:name="android.permission.RECORD_VIDEO" />
-	    <uses-permission android:name="android.permission.CAMERA" />
-	    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	    <uses-permission android:name="android.permission.INTERNET" />
-	    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-	  	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+		
 
     </application>
     
