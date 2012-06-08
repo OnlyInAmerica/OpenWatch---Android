@@ -1,5 +1,7 @@
 package org.aclunj.policetape;
 
+import java.util.regex.Pattern;
+
 import org.aclunj.policetape.MyLocation.LocationResult;
 
 import android.app.Activity;
@@ -106,6 +108,15 @@ public class DescribeActivity extends Activity{
 					new AlertDialog.Builder(c)
 	                .setTitle("Please Provide More Information")
 	                .setMessage("A title and public description must be provided before uploading.")
+	                .setPositiveButton("Okay!", null)
+	                .show();
+					return;
+				}
+				//validate email
+				else if (!checkEmail(email.getText().toString())){
+					new AlertDialog.Builder(c)
+	                .setTitle("Please Provide Valid Email")
+	                .setMessage("Sorry, your email address doesn't appear valid.")
 	                .setPositiveButton("Okay!", null)
 	                .show();
 					return;
@@ -247,6 +258,19 @@ public class DescribeActivity extends Activity{
     private void bindUploadService(){
         u_servicedBind = bindService(new Intent(this, uService.class), 
                 u_connection, Context.BIND_AUTO_CREATE);
+    }
+    
+    public final Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
+            "[a-zA-Z0-9+._%-+]{1,256}" +
+            "@" +
+            "[a-zA-Z0-9][a-zA-Z0-9-]{0,64}" +
+            "(" +
+            "." +
+            "[a-zA-Z0-9][a-zA-Z0-9-]{0,25}" +
+            ")+"
+        );
+    private boolean checkEmail(String email) {
+        return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
     }
 	
 }
