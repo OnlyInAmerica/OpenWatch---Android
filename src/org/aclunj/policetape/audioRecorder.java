@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import android.media.MediaRecorder;
 import android.os.Environment;
@@ -40,7 +42,7 @@ public class audioRecorder {
    */
   public void start() throws IOException {
       
-    path = sanitizePath("/recordings/" + System.currentTimeMillis() + ".3gp");
+    path = sanitizePath("/recordings/" + getDateString() + ".3gp");
       
     String state = android.os.Environment.getExternalStorageState();
     if(!state.equals(android.os.Environment.MEDIA_MOUNTED))  {
@@ -83,6 +85,12 @@ public class audioRecorder {
   public void stop() throws IOException {
     recorder.stop();
     recorder.release();
+  }
+  
+  private String getDateString(){
+  	Date now = new Date();
+  	SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd_KK.mma");
+  	return sdf.format(now);
   }
 
 }

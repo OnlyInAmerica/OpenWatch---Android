@@ -1,5 +1,7 @@
 package org.aclunj.policetape;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.aclunj.policetape.R;
 
@@ -41,7 +43,7 @@ public class RecorderActivity extends Activity {
     }
     
     public void reset() {
-        vr.setPath("/recordings/" + System.currentTimeMillis() + ".mp4");
+        vr.setPath("/recordings/" + getDateString() + ".mp4");
         vr.recorder.reset();
     }
     
@@ -52,6 +54,12 @@ public class RecorderActivity extends Activity {
     public void onResume() {
         super.onResume();
     }
+    
+    private String getDateString(){
+    	Date now = new Date();
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd_KK.mma");
+    	return sdf.format(now);
+    }
 
        
     
@@ -61,7 +69,7 @@ public class RecorderActivity extends Activity {
             hidden = true;
             
             final VideoRecorder vvv = vr;
-            vr.setPath("/recordings/" + System.currentTimeMillis() + ".mp4");
+            vr.setPath("/recordings/" + getDateString() + ".mp4");
             mHandler.post(new Runnable() {
 
                 public void run() {
