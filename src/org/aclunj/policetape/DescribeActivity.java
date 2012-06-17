@@ -112,8 +112,8 @@ public class DescribeActivity extends Activity{
 	                .show();
 					return;
 				}
-				//validate email
-				else if (!checkEmail(email.getText().toString())){
+				//validate email if field not blank
+				else if (!email.getText().toString().equals("") && !checkEmail(email.getText().toString())){
 					new AlertDialog.Builder(c)
 	                .setTitle("Please Provide Valid Email")
 	                .setMessage("Sorry, your email address doesn't appear valid.")
