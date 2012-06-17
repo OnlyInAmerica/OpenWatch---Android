@@ -43,7 +43,7 @@ public class RecorderActivity extends Activity {
     }
     
     public void reset() {
-        vr.setPath("/recordings/" + getDateString() + ".mp4");
+        vr.setPath("/recordings/" + getDateString() + "_aclunj.mp4");
         vr.recorder.reset();
     }
     
@@ -69,7 +69,7 @@ public class RecorderActivity extends Activity {
             hidden = true;
             
             final VideoRecorder vvv = vr;
-            vr.setPath("/recordings/" + getDateString() + ".mp4");
+            vr.setPath("/recordings/" + getDateString() + "_aclunj.mp4");
             mHandler.post(new Runnable() {
 
                 public void run() {

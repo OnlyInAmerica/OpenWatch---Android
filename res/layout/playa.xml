@@ -4,13 +4,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:keepScreenOn="true"
+    android:visibility="gone"
     >
      <org.aclunj.policetape.VideoRecorder 
      	 android:id="@+id/camcorder_preview"
          android:layout_width="fill_parent"
          android:layout_height="fill_parent"
          android:enabled="false" 
-         android:visibility="invisible"
+         android:visibility="gone"
          />
  
 

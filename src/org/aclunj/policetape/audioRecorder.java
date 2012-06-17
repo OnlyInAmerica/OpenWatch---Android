@@ -42,7 +42,7 @@ public class audioRecorder {
    */
   public void start() throws IOException {
       
-    path = sanitizePath("/recordings/" + getDateString() + ".3gp");
+    path = sanitizePath("/recordings/" + getDateString() + "_aclunj.3gp");
       
     String state = android.os.Environment.getExternalStorageState();
     if(!state.equals(android.os.Environment.MEDIA_MOUNTED))  {
