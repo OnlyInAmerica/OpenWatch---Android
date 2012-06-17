@@ -117,16 +117,7 @@
 				    
 				</RelativeLayout>
 				
-				<TextView
-	                android:id="@+id/owShoutout"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center"
-	                android:text="www.openwatch.net"
-	                android:textAppearance="?android:attr/textAppearanceLarge"
-	                android:textColor="#A3A3A3"
-	                android:textSize="20dp"
-	                android:paddingBottom="0dip" />
+
 				
 				
 

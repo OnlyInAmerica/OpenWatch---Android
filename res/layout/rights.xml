@@ -145,7 +145,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:singleLine="false"
-                    android:text="Stop"
+                    android:text="Street"
                     android:textColor="#000000"
                     android:textSize="18dp"
                     android:textStyle="bold" />

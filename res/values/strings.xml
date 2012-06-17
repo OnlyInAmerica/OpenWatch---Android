@@ -113,11 +113,6 @@ recording.
 			to consent to a search.
 		</item>
 		<item>
-		    If you’re given a ticket, you should sign it; otherwise 
-			you can be arrested. You can always fight the case in 
-			court later.
-		</item>
-		<item>
 		    If you’re suspected of drunk driving (DWI) and refuse 
 			to take a blood, urine or breath test, your driver’s license 
 			may be suspended. 
@@ -141,8 +136,8 @@ recording.
 		</item>
 		<item>
 		    If you are arrested, the police can search you and the 
-			area close by. If you are in a building, “close by” usually 
-			means just the room you are in. 
+			area close by. If you are in a building, “close by” rarely 
+			includes more than room you are in.
 		</item>
     </string-array>
     <string-array name="arrest_rights">
@@ -168,24 +163,40 @@ recording.
 			The police may not listen to the call to the lawyer.
         </item>
         <item>
-            Sometimes you can be released without bail, or have
-			bail lowered. Have your lawyer ask the judge about this
-			possibility. You must be taken before the judge on the 
-			next court day after arrest.
-        </item>
-        <item>
             Do not make any decisions in your case until you have 
 			talked with a lawyer.
         </item>
     </string-array>
     <string-array name="stop_rights">
         <item>
-            Handling Police Contact
+            Handling Police Contact on the Street
         </item>
         <item>
-            It\'s not a crime to refuse to answer questions, but
-			refusing to answer might make the police suspicious
-			about you.
+             Remain calm. Don’t run or flee. Think about your words, movement, body language and emotions.
+        </item>
+        <item>
+            Don’t argue, swear, or threaten a complaint. Anything you say or do can be used against you.
+        </item>
+        <item>
+            You DO NOT have to consent to any search of yourself, 
+			your car or your house. If you DO consent to a search, it 
+			can affect your rights later in court. If the police say they 
+			have a search warrant, ASK TO SEE IT.
+        </item>
+        <item>
+            Speak carefully. It’s not illegal to decline to answer questions, but bad-mouthing an officer isn’t helpful.
+        </item>
+        <item>
+            Keep your hands where officers can see them.
+        </item>
+        <item>
+            Don’t touch any police officer.
+        </item>
+        <item>
+            Don’t resist, even if you think you’re innocent.
+        </item>
+        <item>
+            Don’t make statements about the incident.
         </item>
         <item>
             You must show your driver\'s license and registration 
@@ -201,7 +212,7 @@ recording.
         <item>
              Police may “pat-down” your clothing if they suspect a 
 			concealed weapon. Don’t physically resist, but make it 
-			clear that you don’t consent to any further search
+			clear that you don’t consent to any further search.
         </item>
         <item>
             Ask if you are under arrest. If you are, you have a right 
@@ -216,55 +227,18 @@ recording.
             What you say to the police is always important. What 
 			you say can be used against you, and it can give the police 
 			an excuse to arrest you, especially if you badmouth a 
-			police officer
-        </item>
-        <item>
-            You must show your driver\'s license and registration 
-			when stopped in a car. Otherwise, you don\'t have to
-			answer any questions if you are detained or arrested, 
-			with one important exception. The police may ask for 
-			your name if you have been properly detained, and you 
-			can be arrested in some states for refusing to give it. If 
-			you reasonably fear that your name is incriminating, you 
-			can claim the right to remain silent, which may be a 
-			defense in case you are arrested anyway. 
-        </item>
-        <item>
-            You DO NOT have to consent to any search of yourself, 
-			your car or your house. If you DO consent to a search, it 
-			can affect your rights later in court. If the police say they 
-			have a search warrant, ASK TO SEE IT.
+			police officer.
         </item>
         <item>
             Do not interfere with, or obstruct the police – you
 			can be arrested for it. 
         </item>
         <item>
-            Think carefully about your words, movement, body 
-			language, and emotions.
-        </item>
-        <item>
             Don\’t get into an argument with the police. 
         </item>
         <item>
             Remember, anything you say or do can be used 
-			against you
-        </item>
-        <item>
-            Keep your hands where the police can see them.
-        </item>
-        <item>
-            Don\’t run. Don’t touch any police officer.
-        </item>
-        <item>
-            Don\’t resist even if you believe you are innocent. 
-        </item>
-        <item>
-            Don\’t complain on the scene or tell the police they\’re 
-			wrong or that you\’re going to file a complaint.
-        </item>
-        <item>
-            Do not make any statements regarding the incident. 
+			against you.
         </item>
         <item>
             Ask for a lawyer immediately upon your arrest. 
