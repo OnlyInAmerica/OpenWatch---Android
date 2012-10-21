@@ -17,6 +17,8 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.DialogInterface.OnClickListener;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
@@ -24,6 +26,10 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -34,6 +40,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.ViewGroup.LayoutParams;
+import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
@@ -246,9 +253,42 @@ public class MainActivityGroup extends ActivityGroup {
                                 case 1:
                                     Intent it;
                                     Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getAbsolutePath() + "/recordings/" + br);
-                                    it = new Intent(Intent.ACTION_VIEW, uri);
-                                    it.setDataAndType(uri,"video/3gpp");
-                                    startActivity(it);
+                                    
+                                    // Attempt to determine MIME type from uri
+                                    String mime_type = null;
+                                    MimeTypeMap mime_map = MimeTypeMap.getSingleton();
+                                    String extension = MimeTypeMap.getFileExtensionFromUrl(uri.toString());
+                                    
+                                    if(extension.compareTo("") != 0 && mime_map.hasExtension(extension)){
+                                    	mime_type = mime_map.getMimeTypeFromExtension(extension);
+                                    	it = new Intent(Intent.ACTION_VIEW, uri);
+                                        it.setDataAndType(uri, mime_type);
+                                        
+                                        // Validate intent will resolve, error dialog if not
+                                        if(MainActivityGroup.isIntentAvailable(c, it)){
+                                        	startActivity(it);
+                                        	
+                                        }
+                                    }
+                                    
+                                    // At this point, the device either has no app
+                                    // to play media, or media mime_type was not recognized
+                                    
+                                    // Dismiss upload/play dialog, show error 
+                                	dialog.dismiss();
+                                	TextView message_view = (TextView) View.inflate(c, R.layout.tabletext, null);
+                                	message_view.setText(Html.fromHtml(getString(R.string.no_mediaplayer_dialog_content)));
+                                	message_view.setTextSize(18);
+                                	message_view.setPadding(10, 0, 10, 0);
+                                	message_view.setMovementMethod(LinkMovementMethod.getInstance());
+                                	
+                                	AlertDialog.Builder no_player_builder = new AlertDialog.Builder(MainActivityGroup.this);
+                                	no_player_builder.setTitle(R.string.no_mediaplayer_dialog_title)
+                                	.setView(message_view)
+                                	.setNeutralButton("Ok", null);
+                                	AlertDialog no_player_dialog = no_player_builder.create();
+                                	no_player_dialog.show();
+                                    
                                     return;
                                 }
                                 
@@ -457,6 +497,14 @@ class ListItemsAdapter extends ArrayAdapter<String> {
     
     
 }
+
+	public static boolean isIntentAvailable(Context ctx, Intent intent) {
+	   final PackageManager mgr = ctx.getPackageManager();
+	   List<ResolveInfo> list =
+	      mgr.queryIntentActivities(intent, 
+	         PackageManager.MATCH_DEFAULT_ONLY);
+	   return list.size() > 0;
+	} 
     
        
 }

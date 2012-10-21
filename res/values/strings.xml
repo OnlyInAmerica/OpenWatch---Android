@@ -28,6 +28,8 @@
     <string name="open">Select File to Upload</string>
     <string name="tutorial">Tutorial</string>
     <string name="upload_or_play">Upload or Play?</string>
+    <string name="no_mediaplayer_dialog_title">Media Player Required</string>
+    <string name="no_mediaplayer_dialog_content">Your phone doesn\'t have a compatible media player installed. We recommend trying &lt;a href="https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad">MXPlayer&lt;/a></string>
     <string name="play">Play</string>
     <string name="about_text">Police Tape is part of OpenWatch, a participatory citizen media project aiming to provide documentary evidence of uses and abuses of power.\n\
 
